@@ -34,7 +34,8 @@ class AuctionPage:
 
     def fill_lot_info_block(self):
         self.page.locator(LotInfoBlock.LOT_QUANTITY).fill('4')
-        self.page.locator(LotInfoBlock.MEASURE_UNIT).click()
+        self.page.get_by_label("", exact=True).first.click()
+        # self.page.locator(LotInfoBlock.MEASURE_UNIT).click()
         self.page.locator(LotInfoBlock.MEASURE_UNIT_OPTION).click()
         self.page.locator(LotInfoBlock.DETAILED_LOT_DESCRIPTION).first.fill('dsecription')
         #self.page.locator("div:nth-child(9) > div > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input").fill('0500000000')

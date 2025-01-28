@@ -20,9 +20,10 @@ class NavigationPage:
 
     def close_notification_if_exists(self):
         # Use nth() to select the last element in the matched list
-        element = self.page.locator("//*[local-name()='svg' and contains(@class, 'MuiSvgIcon-root') and @viewBox='0 0 24 24'][./*[local-name()='path' and @d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z']]").nth(
-            -1)
-        element.click()
+        # element = self.page.locator("//*[local-name()='svg' and contains(@class, 'MuiSvgIcon-root') and @viewBox='0 0 24 24'][./*[local-name()='path' and @d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z']]").nth(
+        #     -1)
+        # element.click()
+        self.page.get_by_test_id("CloseIcon").nth(1).click()
 
 
 

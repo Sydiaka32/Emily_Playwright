@@ -10,7 +10,7 @@ def test_creation_draft(navigate_to_my_auctions):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
     my_auctions_page = MyAuctionsPage(page)
     auction_page = AuctionPage(page)
-    navigation_page = NavigationPage(page)  # Missing instantiation fixed here
+    navigation_page = NavigationPage(page)
 
     # Step 3: Navigate to "New Auction" page
     my_auctions_page.navigate_to_new_auction()
@@ -52,10 +52,8 @@ def test_creation_draft(navigate_to_my_auctions):
     navigation_page.close_notification_if_exists()
 
     page.wait_for_timeout(3000)
+
     # Step 12: Compare the data with expected values
     assert my_auctions_page.get_card_title() == "Auction", f"Expected title to be 'Auction', but got '{my_auctions_page.get_card_title()}'"
     assert my_auctions_page.get_card_procedure() == "Продаж на англійському аукціоні", f"Expected procedure to be 'Продаж на англійському аукціоні', but got '{my_auctions_page.get_card_procedure()}'"
     assert my_auctions_page.get_card_status() == "Чернетка", f"Expected status to be 'Чернетка', but got '{my_auctions_page.get_card_status()}'"
-
-    my_auctions_locators = MyAuctionsLocators()
-    page.locator(my_auctions_locators.AUCTION_CARD).screenshot(path="screenshot.png")
