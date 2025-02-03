@@ -8,15 +8,7 @@ from locators.my_auctions_locators import MyAuctionsLocators
 
 def test_delete_draft(navigate_to_my_auctions):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
-    login_page = LoginPage(page)
-    navigation_page = NavigationPage(page)
     my_auctions_page = MyAuctionsPage(page)
-
-    # Step 2: Navigate to "My Auctions"
-    navigation_page.navigate_to_my_auctions()
-
-    # Step: get auction_id
-    page.on("response", my_auctions_page.handle_response)
 
     # Step 3: Delete draft
     my_auctions_page.delete_option()
@@ -24,8 +16,8 @@ def test_delete_draft(navigate_to_my_auctions):
     # Handle popup and updating time
     page.wait_for_timeout(3000)
 
-    # Step: ensure that auction deleted
-    # Step 3: Verify that the auction is no longer in the list
-    page.on("response", my_auctions_page.verify_deletion)
+    assert my_auctions_page.get_card_title() == "AuctionEditedForDeletion", \
+        f"Expected title to be 'Auction', but got '{MyAuctionsPage.get_card_title()}'"
+
 
 

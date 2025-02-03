@@ -8,12 +8,8 @@ from locators.my_auctions_locators import MyAuctionsLocators
 
 def test_edit_draft(navigate_to_my_auctions):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
-    navigation_page = NavigationPage(page)
     my_auctions_page = MyAuctionsPage(page)
     auction_page = AuctionPage(page)
-
-    # Step 2: Navigate to "My Auctions"
-    navigation_page.navigate_to_my_auctions()
 
     # Step 13: Go to edit mode of draft and edit
     my_auctions_page.edit_mode()
