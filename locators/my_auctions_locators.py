@@ -1,9 +1,10 @@
 class MyAuctionsLocators:
-    CARD_TITLE = '//*[@id="tabpanel-/my-auctions"]/div/div[2]/div/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/a'
-    CARD_PROCEDURE = '//*[@id="tabpanel-/my-auctions"]/div/div[2]/div/div[1]/div/div/div[1]/div[1]/h5'
-    CARD_STATUS = '//*[@id="tabpanel-/my-auctions"]/div/div[2]/div/div[1]/div/div/div[2]/div[1]/div/div[2]/div/div[3]/p'
-    AUCTION_CARD = '//*[@id="tabpanel-/my-auctions"]/div/div[2]/div/div[1]/div'
-    MORE_OPTIONS = ".MuiPaper-root > div > div > div:nth-child(2) > div > div:nth-child(2) > .MuiButtonBase-root"
+    CARD_TITLE = '(//div[contains(@class, "MuiGrid-container")]//h4)[1]'
+    CARD_PROCEDURE = '(//div[contains(@class, "MuiGrid-container")]//h5[contains(@class, "MuiTypography-h5")])[1]'
+    CARD_STATUS = '(//div[contains(@class, "MuiGrid-container")]//p)[1]'
+    AUCTION_CARD = '(//div[contains(@class, "MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42")])[2]'
+    MORE_OPTIONS = ("(//div[contains(@class, 'MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42')])[2]"
+                    "//button[contains(@class, 'MuiIconButton-root')]")
     EDIT_OPTION = "Редагувати"
     DELETE_OPTION = "Видалити"
     PUBLISH_OPTION = "Опублікувати"
