@@ -6,24 +6,26 @@ from pages.auction_page import AuctionPage
 from locators.my_auctions_locators import MyAuctionsLocators
 
 
-def test_edit_draft(navigate_to_my_auctions):
+def test_delete_draft(navigate_to_my_auctions):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
+    login_page = LoginPage(page)
     navigation_page = NavigationPage(page)
     my_auctions_page = MyAuctionsPage(page)
-    auction_page = AuctionPage(page)
 
     # Step 2: Navigate to "My Auctions"
     navigation_page.navigate_to_my_auctions()
 
-    # Step 13: Go to edit mode of draft and edit
-    my_auctions_page.edit_mode()
-    auction_page.edit_title()
-    page.wait_for_timeout(1000)
-    auction_page.save_changes()
+    # Step: get auction_id
+    page.on("response", my_auctions_page.handle_response)
+
+    # Step 3: Delete draft
+    my_auctions_page.delete_option()
 
     # Handle popup and updating time
-    page.wait_for_timeout(2000)
+    page.wait_for_timeout(3000)
 
-    # Step 14: Compare edited title
-    assert my_auctions_page.get_card_title() == "AuctionEditedForDeletion", \
-        f"Expected title to be 'Auction', but got '{MyAuctionsPage.get_card_title()}'"
+    # Step: ensure that auction deleted
+    # Step 3: Verify that the auction is no longer in the list
+    page.on("response", my_auctions_page.verify_deletion)
+
+
