@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Removed extra steps for reaching my auction page">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Updated test for deletion using new approach by extracting id from url">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locators/my_auctions_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/my_auctions_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my_auctions_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my_auctions_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_03delete_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_03delete_draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_04publish_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_04publish_draft.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738615794613</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated test for deletion using new approach by extracting id from url">
+      <option name="closed" value="true" />
+      <created>1738872664940</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1738872664940</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -140,6 +147,7 @@
     <MESSAGE value="Updated edit actions with waiting" />
     <MESSAGE value="Removed exatra handling of popup" />
     <MESSAGE value="Removed extra steps for reaching my auction page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed extra steps for reaching my auction page" />
+    <MESSAGE value="Updated test for deletion using new approach by extracting id from url" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated test for deletion using new approach by extracting id from url" />
   </component>
 </project>

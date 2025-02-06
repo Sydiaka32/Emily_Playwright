@@ -36,8 +36,8 @@ def test_delete_draft(navigate_to_my_auctions):
     page.wait_for_timeout(3000)
 
     # Step 6: Verify redirection
-    assert (f"{config_parser.all_auctions_url}"
-            in page.url), f"Auction {auction_id} was not deleted, expected redirection!"
+    assert (f"{config_parser.all_auctions_url}" in page.url), \
+        f"Auction {auction_id} was not deleted, expected redirection!"
 
 
 
