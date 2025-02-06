@@ -90,6 +90,9 @@ class MyAuctionsPage:
         self.page.locator(MyAuctionsLocators.MORE_OPTIONS).first.click()
         self.page.get_by_role("button", name=MyAuctionsLocators.PUBLISH_COPY_BASED).click()
 
+    def retrieve_auction_id(self):
+        self.page.get_by_role("link", name=MyAuctionsLocators.DETAILS_BUTTON).first.click()
+        # self.page.auction_url = page.url
 
 
 

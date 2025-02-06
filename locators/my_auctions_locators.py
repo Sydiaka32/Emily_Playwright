@@ -8,6 +8,7 @@ class MyAuctionsLocators:
     EDIT_OPTION = "Редагувати"
     DELETE_OPTION = "Видалити"
     PUBLISH_OPTION = "Опублікувати"
+    DETAILS_BUTTON = "Детальніше"
 
     # Published
     AUCTION_CARD_PUBLISHED = '(//*[@id="tabpanel-/my-auctions"]/div/div[2]/div/div)[1]'
