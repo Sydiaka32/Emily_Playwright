@@ -28,3 +28,25 @@ def navigate_to_my_auctions(login):
     navigation_page = NavigationPage(login)
     navigation_page.navigate_to_my_auctions()
     return login  # Pass the browser with 'My Auctions' loaded
+
+@pytest.fixture
+def get_auction_id(navigate_to_my_auctions):
+    """Fixture to open an auction in a new tab, retrieve its ID, and close the tab."""
+    def _get_auction_id():
+        # Initialize MyAuctionsPage with the page object
+        my_auctions_page = MyAuctionsPage(navigate_to_my_auctions)
+
+        # Open the auction in a new tab
+        with navigate_to_my_auctions.expect_popup() as new_tab:
+            my_auctions_page.retrieve_auction_id()  # Call the method to open the auction
+        auction_details_page = new_tab.value  # Get the new tab reference
+
+        # Extract the auction ID from the URL
+        auction_id = auction_details_page.url.split("/")[-1]
+
+        # Close the auction details tab
+        auction_details_page.close()
+
+        return auction_id
+    return _get_auction_id
+
