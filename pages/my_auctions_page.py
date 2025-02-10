@@ -78,15 +78,15 @@ class MyAuctionsPage:
         # Replace with the locator for the status field in the card
         return self.page.get_by_role("heading", name=MyAuctionsLocators.PUBLISHED_CARD_PROCEDURE).first.inner_text()
 
-    def publish_copy(self):
-        self.page.locator(MyAuctionsLocators.MORE_OPTIONS).first.click()
-        self.page.get_by_role("button", name=MyAuctionsLocators.PUBLISH_COPY).click()
+    def copy_option(self):
+        self.page.locator(MyAuctionsLocators.MORE_OPTIONS).click()
+        self.page.get_by_role("button", name=MyAuctionsLocators.COPY).nth(0).click()
 
-    def copy_popup(self):
+    def copy_popup_yes(self):
         self.page.get_by_placeholder(MyAuctionsLocators.ORDER_NUMBER_FIELD).fill("1")
-        self.page.get_by_role("button", name=MyAuctionsLocators.SUBMIT_POPUP)
+        self.page.get_by_role("button", name=MyAuctionsLocators.SUBMIT_POPUP).click()
 
-    def publish_copy_based(self):
+    def copy_based_option(self):
         self.page.locator(MyAuctionsLocators.MORE_OPTIONS).first.click()
         self.page.get_by_role("button", name=MyAuctionsLocators.PUBLISH_COPY_BASED).click()
 

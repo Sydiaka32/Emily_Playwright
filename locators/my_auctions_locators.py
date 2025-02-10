@@ -3,8 +3,8 @@ class MyAuctionsLocators:
     CARD_PROCEDURE = '(//div[contains(@class, "MuiGrid-container")]//h5[contains(@class, "MuiTypography-h5")])[1]'
     CARD_STATUS = '(//div[contains(@class, "MuiGrid-container")]//p)[1]'
     AUCTION_CARD = '(//div[contains(@class, "MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42")])[2]'
-    MORE_OPTIONS = ("(//div[contains(@class, 'MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42')])[2]"
-                    "//button[contains(@class, 'MuiIconButton-root')]")
+    MORE_OPTIONS = ("((//div[contains(@class, 'MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42')])[2]"
+                    "//button[contains(@class, 'MuiIconButton-root')])[2]")
     EDIT_OPTION = "Редагувати"
     DELETE_OPTION = "Видалити"
     PUBLISH_OPTION = "Опублікувати"
@@ -16,7 +16,7 @@ class MyAuctionsLocators:
     PUBLISHED_CARD_PROCEDURE = "Продаж на англійському аукціоні"
     PUBLISHED_CARD_STATUS = "Прийняття заяв на участь"
 
-    PUBLISH_COPY = "Створити копію"
+    COPY = "Створити копію"
     PUBLISH_COPY_BASED = "Створити копію процедури на основі існуючої"
     ORDER_NUMBER_FIELD = "Черговість лоту"
     SUBMIT_POPUP = "ТАК"

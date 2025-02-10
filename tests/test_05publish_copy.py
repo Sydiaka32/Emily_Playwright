@@ -1,46 +1,51 @@
-from playwright.async_api import async_playwright
-
+from config.settings import ConfigParser
 from pages.auction_page import AuctionPage
-from pages.login_page import LoginPage
 from pages.my_auctions_page import MyAuctionsPage
-from pages.navigation_page import NavigationPage
-from utils.api_requests import ApiRequests
 
 
-async def test_create_copy(api_request_context):
-    async with async_playwright() as playwright:
-        browser = await playwright.chromium.launch(headless=False)
-        context = await browser.new_context()
-        page = await context.new_page()
+def test_publish_copy(navigate_to_my_auctions):
+    page = navigate_to_my_auctions  # The browser object passed by the fixture
+    my_auctions_page = MyAuctionsPage(page)
+    config_parser = ConfigParser()
+    auction_page = AuctionPage(page)
 
-        auction_actions = AuctionPage(page)
-        my_auctions_page = MyAuctionsPage(page)
-        api_requests = ApiRequests(api_request_context)
+    # Step 1: Click on the first auction (opens in a new tab)
+    with page.expect_popup() as new_tab:
+        my_auctions_page.retrieve_auction_id()
+    auction_details_page = new_tab.value  # Get the new tab reference
 
-        login_page = LoginPage(page)
-        navigation_page = NavigationPage(page)
+    # Step 2: Extract the original auction ID from the URL
+    original_auction_id = auction_details_page.url.split("/")[-1]
 
-        # Ensure login and navigation are awaited correctly
-        await login_page.login()
-        await navigation_page.navigate_to_my_auctions()
+    # Step 3: Close auction details tab & return to "My Auctions"
+    auction_details_page.close()
 
-        # Debug: Check if the auction ID is being fetched correctly
-        initial_id = await api_requests.get_latest_auction_id()
-        assert initial_id, f"Failed to retrieve the initial auction ID: {initial_id}"
-        print(f"Initial Auction ID: {initial_id}")
+    # Step 4: Click the copy option to create a new auction
+    my_auctions_page.copy_option()
 
-        # Perform actions to create a copy
-        await my_auctions_page.publish_copy()
-        await my_auctions_page.copy_popup()
-        await auction_actions.save_changes()
+    page.wait_for_timeout(1500)
 
-        # Fetch the final auction ID and check if it’s valid
-        final_id = await api_requests.get_latest_auction_id()
-        assert final_id, f"Failed to retrieve the final auction ID: {final_id}"
-        print(f"Final Auction ID: {final_id}")
+    my_auctions_page.copy_popup_yes()
 
-        # Verify that the IDs are different
-        assert initial_id != final_id, "The auction ID did not change after creating a copy"
+    page.wait_for_timeout(3000)
 
-        # Clean up
-        await browser.close()
+    # Step 5: Save the draft of the copied auction
+    auction_page.save_changes()
+
+    # Step 6: Wait and go to the new auction details page
+    page.wait_for_timeout(3000)
+
+    # Step 7: Click on the first auction again (assuming it's the copied auction)
+    with page.expect_popup() as new_tab:
+        my_auctions_page.retrieve_auction_id()
+    copied_auction_details_page = new_tab.value
+
+    # Step 8: Extract the copied auction ID from the URL
+    copied_auction_id = copied_auction_details_page.url.split("/")[-1]
+
+    # Step 9: Close the copied auction details page
+    copied_auction_details_page.close()
+
+    # Step 10: Compare IDs to ensure they are different
+    assert original_auction_id != copied_auction_id, \
+        f"Copied auction has the same ID as the original! {original_auction_id} == {copied_auction_id}"

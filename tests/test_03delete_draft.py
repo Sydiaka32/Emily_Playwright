@@ -1,11 +1,5 @@
-from playwright.sync_api import  sync_playwright
-
 from config.settings import ConfigParser
-from pages.login_page import LoginPage
-from pages.navigation_page import NavigationPage
 from pages.my_auctions_page import MyAuctionsPage
-from pages.auction_page import AuctionPage
-from locators.my_auctions_locators import MyAuctionsLocators
 
 
 def test_delete_draft(navigate_to_my_auctions):

@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Updated test for deletion using new approach by extracting id from url">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Updated test for publication draft">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locators/my_auctions_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/my_auctions_locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my_auctions_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my_auctions_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_03delete_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_03delete_draft.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_04publish_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_04publish_draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_05publish_copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_05publish_copy.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738872664940</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated test for publication draft">
+      <option name="closed" value="true" />
+      <created>1738874787572</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738874787572</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -148,6 +158,7 @@
     <MESSAGE value="Removed exatra handling of popup" />
     <MESSAGE value="Removed extra steps for reaching my auction page" />
     <MESSAGE value="Updated test for deletion using new approach by extracting id from url" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated test for deletion using new approach by extracting id from url" />
+    <MESSAGE value="Updated test for publication draft" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated test for publication draft" />
   </component>
 </project>
