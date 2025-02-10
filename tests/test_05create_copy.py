@@ -3,10 +3,9 @@ from pages.auction_page import AuctionPage
 from pages.my_auctions_page import MyAuctionsPage
 
 
-def test_publish_copy(navigate_to_my_auctions):
+def test_create_copy(navigate_to_my_auctions):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
     my_auctions_page = MyAuctionsPage(page)
-    config_parser = ConfigParser()
     auction_page = AuctionPage(page)
 
     # Step 1: Click on the first auction (opens in a new tab)
