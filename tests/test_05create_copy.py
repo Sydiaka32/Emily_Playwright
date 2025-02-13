@@ -7,6 +7,8 @@ def test_create_copy(navigate_to_my_auctions, get_auction_id):
     my_auctions_page = MyAuctionsPage(page)
     auction_page = AuctionPage(page)
 
+    my_auctions_page.switch_to_published()
+
     # Step 1: Retrieve the original auction ID using the fixture
     original_auction_id = get_auction_id()
 

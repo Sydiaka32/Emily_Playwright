@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="renaming test">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="retrieving duplicated code into the fixture">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_05create_copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_05create_copy.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739219796653</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="retrieving duplicated code into the fixture">
+      <option name="closed" value="true" />
+      <created>1739221607626</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1739221607626</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -175,6 +181,7 @@
     <MESSAGE value="Updated test for publication draft" />
     <MESSAGE value="Added test for creating copy of auction" />
     <MESSAGE value="renaming test" />
-    <option name="LAST_COMMIT_MESSAGE" value="renaming test" />
+    <MESSAGE value="retrieving duplicated code into the fixture" />
+    <option name="LAST_COMMIT_MESSAGE" value="retrieving duplicated code into the fixture" />
   </component>
 </project>

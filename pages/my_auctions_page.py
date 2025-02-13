@@ -30,38 +30,6 @@ class MyAuctionsPage:
         self.page.locator(MyAuctionsLocators.MORE_OPTIONS).first.click()
         self.page.get_by_role("button", name=MyAuctionsLocators.DELETE_OPTION).click()
 
-    def get_latest_auction_id(self, response):
-        """Fetch the latest auction ID via an API request."""
-        url = "https://qa.ualand.utest.pro/api/v1.0/auctions/search/created/short?page=0&size=5&sort=id%2Cdesc"
-        response = self.api_context.get(url)
-        if response.ok:
-            try:
-                json_data = response.json()
-                if json_data and isinstance(json_data, list):
-                    auction_id = json_data[0].get("id")
-                    if auction_id:
-                        print(f"Extracted Auction ID: {auction_id}")
-                        return auction_id
-                    else:
-                        print("No 'id' field found in the first auction item.")
-                else:
-                    print("Response JSON is empty or not a list.")
-            except Exception as e:
-                print(f"Error parsing response JSON: {e}")
-        else:
-            print(f"Failed to fetch auctions. HTTP Status: {response.status}")
-        return None
-
-    def verify_deletion(self, response):
-        """Verify that the auction is no longer in the response"""
-        # Match the exact URL or part of the URL
-        if "auctions/search/created/short" in response.url and response.status == 200:
-            json_data = response.json()
-            # Check if the auction ID is no longer in the list
-            auction_deleted = all(item["id"] != self.auction_id for item in json_data)
-            assert auction_deleted, f"Auction with ID {self.auction_id} was not deleted."
-            print("Auction successfully deleted")
-
     def publish_option(self):
         self.page.locator(MyAuctionsLocators.MORE_OPTIONS).first.click()
         self.page.get_by_role("button", name=MyAuctionsLocators.PUBLISH_OPTION).click()
@@ -79,7 +47,7 @@ class MyAuctionsPage:
         return self.page.get_by_role("heading", name=MyAuctionsLocators.PUBLISHED_CARD_PROCEDURE).first.inner_text()
 
     def copy_option(self):
-        self.page.locator(MyAuctionsLocators.MORE_OPTIONS).click()
+        self.page.locator(MyAuctionsLocators.MORE_OPTIONS).first.click()
         self.page.get_by_role("button", name=MyAuctionsLocators.COPY).nth(0).click()
 
     def copy_popup_yes(self):
@@ -94,6 +62,8 @@ class MyAuctionsPage:
         self.page.get_by_role("link", name=MyAuctionsLocators.DETAILS_BUTTON).first.click()
         # self.page.auction_url = page.url
 
+    def switch_to_published(self):
+        self.page.get_by_role("tab", name=MyAuctionsLocators.PUBLISHED_TAB).click()
 
 
 
