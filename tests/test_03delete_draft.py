@@ -2,34 +2,25 @@ from config.settings import ConfigParser
 from pages.my_auctions_page import MyAuctionsPage
 
 
-def test_delete_draft(navigate_to_my_auctions):
+def test_delete_draft(navigate_to_my_auctions, get_auction_id):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
     my_auctions_page = MyAuctionsPage(page)
     config_parser = ConfigParser()
 
-    # Step 2: Click on first auction (opens in new tab)
-    with page.expect_popup() as new_tab:
-        my_auctions_page.retrieve_auction_id()
-    auction_details_page = new_tab.value  # Get the new tab reference
+    # Step 1: Retrieve the original auction ID using the fixture
+    auction_id = get_auction_id()
 
-    # Step 3: Extract auction ID from the new tab URL
-    auction_url = auction_details_page.url
-    auction_id = auction_url.split("/")[-1]  # Extract the ID
-
-    # Step 4: Close auction details tab & return to "My Auctions"
-    auction_details_page.close()
-
-    # Step 3: Delete draft
+    # Step 2: Delete draft
     my_auctions_page.delete_option()
 
-    # Handle popup and updating time
+    # Handle updating time
     page.wait_for_timeout(3000)
 
-    # Step 5: Manually try to visit the auction details page
+    # Step 3: Manually try to visit the auction details page
     page.goto(f"{config_parser.base_url}/auctions/{auction_id}")  # Replace with actual URL format
     page.wait_for_timeout(3000)
 
-    # Step 6: Verify redirection
+    # Step 4: Verify redirection
     assert (f"{config_parser.all_auctions_url}" in page.url), \
         f"Auction {auction_id} was not deleted, expected redirection!"
 
