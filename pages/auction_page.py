@@ -82,5 +82,10 @@ class AuctionPage:
     def save_changes(self):
         self.page.get_by_role("button", name=SubmitionBlock.SAVE_CHANGES).click()
 
+    def get_previous_id(self):
+        value = self.page.get_by_label(BasicInfoBlock.PREVIOUS_AUCTION_ID).input_value()
+        return value
 
-
+    def enable_discount(self):
+        self.page.get_by_label(DetailLotDescriptionBlock.DISCOUNT_TOGGLE).check()
+        self.page.locator(DetailLotDescriptionBlock.DISCOUNT_FIELD).fill("2")

@@ -13,12 +13,15 @@ class BasicInfoBlock:
 
     LOT_NUMBER = "Введіть номер лота"
     DESCRIPTION = "div:nth-child(2) > div > .MuiFormControl-root > .MuiInputBase-root > textarea"
+    PREVIOUS_AUCTION_ID = "Ідентифікатор попереднього аукціону"
 
 
 class DetailLotDescriptionBlock:
     INITIAL_AMOUNT = "input[name=\"specificData\\.initialAmount\"]"
     MIN_STEP = ("div:nth-child(3) > .MuiPaper-root > div:nth-child(4) > div:nth-child(2) > div > "
                 ".MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input")
+    DISCOUNT_TOGGLE = "Знижка"
+    DISCOUNT_FIELD = "//input[@name='specificData.discount']"
 
 
 class LotInfoBlock:

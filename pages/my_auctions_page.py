@@ -49,14 +49,15 @@ class MyAuctionsPage:
     def copy_option(self):
         self.page.locator(MyAuctionsLocators.MORE_OPTIONS).first.click()
         self.page.get_by_role("button", name=MyAuctionsLocators.COPY).nth(0).click()
-
-    def copy_popup_yes(self):
         self.page.get_by_placeholder(MyAuctionsLocators.ORDER_NUMBER_FIELD).fill("1")
-        self.page.get_by_role("button", name=MyAuctionsLocators.SUBMIT_POPUP).click()
 
     def copy_based_option(self):
         self.page.locator(MyAuctionsLocators.MORE_OPTIONS).first.click()
         self.page.get_by_role("button", name=MyAuctionsLocators.PUBLISH_COPY_BASED).click()
+        self.page.get_by_placeholder(MyAuctionsLocators.ORDER_NUMBER_FIELD).fill("2")
+
+    def copy_popup_yes(self):
+        self.page.get_by_role("button", name=MyAuctionsLocators.SUBMIT_POPUP).click()
 
     def retrieve_auction_id(self):
         self.page.get_by_role("link", name=MyAuctionsLocators.DETAILS_BUTTON).first.click()
@@ -65,5 +66,6 @@ class MyAuctionsPage:
     def switch_to_published(self):
         self.page.get_by_role("tab", name=MyAuctionsLocators.PUBLISHED_TAB).click()
 
-
+    def goto_auction_details(self):
+        self.page.get_by_role("link", name=MyAuctionsLocators.DETAILS_BUTTON).first.click()
 
