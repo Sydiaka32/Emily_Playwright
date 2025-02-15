@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="retrieving duplicated code into the fixture">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="trying to implement logic with continuous checking for notifications">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_01creation_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_01creation_draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_02edit_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_02edit_draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_03delete_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_03delete_draft.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +169,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739221607626</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="updated logic for copy creation to prevent fails due to draft auctions">
+      <option name="closed" value="true" />
+      <created>1739474168706</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1739474168706</updated>
+    </task>
+    <task id="LOCAL-00014" summary="trying to implement logic with continuous checking for notifications">
+      <option name="closed" value="true" />
+      <created>1739479997201</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739479997201</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,6 +201,8 @@
     <MESSAGE value="Added test for creating copy of auction" />
     <MESSAGE value="renaming test" />
     <MESSAGE value="retrieving duplicated code into the fixture" />
-    <option name="LAST_COMMIT_MESSAGE" value="retrieving duplicated code into the fixture" />
+    <MESSAGE value="updated logic for copy creation to prevent fails due to draft auctions" />
+    <MESSAGE value="trying to implement logic with continuous checking for notifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying to implement logic with continuous checking for notifications" />
   </component>
 </project>

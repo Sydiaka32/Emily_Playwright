@@ -7,10 +7,10 @@ def test_publish_draft(navigate_to_my_auctions):
     my_auctions_page = MyAuctionsPage(page)
     navigation_page = NavigationPage(page)
 
-    # Step 3: Publish draft
+    # Step 1: Publish draft
     my_auctions_page.publish_option()
 
-    # Handle popup and updating time
+    # Handle updating time
     page.wait_for_timeout(1500)
 
     # Refresh the current page
@@ -20,7 +20,7 @@ def test_publish_draft(navigate_to_my_auctions):
     page.wait_for_timeout(3000)
     navigation_page.close_notification_if_exists()
 
-    # Step 14: Compare edited title
+    # Step 2: Compare edited title
     assert my_auctions_page.get_card_published_status() == "Прийняття заяв на участь", \
         (f"Expected title to be 'Прийняття заяв на участь', "
          f"but got '{my_auctions_page.get_card_published_status()}'")

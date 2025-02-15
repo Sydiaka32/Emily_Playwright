@@ -1,4 +1,3 @@
-
 from pages.navigation_page import NavigationPage
 from pages.my_auctions_page import MyAuctionsPage
 from pages.auction_page import AuctionPage
@@ -10,25 +9,27 @@ def test_creation_draft(navigate_to_my_auctions):
     auction_page = AuctionPage(page)
     navigation_page = NavigationPage(page)
 
-    # Step 3: Navigate to "New Auction" page
+    # Step 1: Navigate to "New Auction" page
     my_auctions_page.navigate_to_new_auction()
 
-    # Step 4: Select organiser
+    # Step 2: Fill in all required fields
+
+    # Select organiser
     auction_page.select_organiser()
 
-    # Step 5: Select procedure
+    # Select procedure
     auction_page.select_procedure()
 
-    # Step 6.1: Close telegram popup
+    # Extra step: Wait and Close telegram popup
     navigation_page.close_telegram_popup()
 
-    # Step 6: Fill in Basic block
+    # Fill in Basic block
     auction_page.fill_basic_info_block()
 
-    # Step 7: Fill in Details
+    # Fill in Details block
     auction_page.fill_detail_lot_description_block()
 
-    # Step 8: Fill in Lot info
+    # Fill in Lot info block
     auction_page.select_classifier()
     auction_page.fill_lot_info_block()
     auction_page.point_map()
@@ -36,22 +37,15 @@ def test_creation_draft(navigate_to_my_auctions):
     # Wait for 4 seconds
     page.wait_for_timeout(4000)
 
-    # Step 9: Upload document
+    # Upload document
     auction_page.upload_document()
 
-    # Step 10: Save draft
+    # Step 3: Save draft
     auction_page.save_draft()
-
-    # Wait for 20 seconds
-    page.wait_for_timeout(15000)
-    navigation_page.close_telegram_popup()
-
-    page.wait_for_timeout(3000)  # Wait for 3 seconds before checking
-    navigation_page.close_notification_if_exists()
 
     page.wait_for_timeout(3000)
 
-    # Step 12: Compare the data with expected values
+    # Step 4: Compare the data with expected values
     assert my_auctions_page.get_card_title() == "Auction", \
         f"Expected title to be 'Auction', but got '{my_auctions_page.get_card_title()}'"
     assert my_auctions_page.get_card_procedure() == "Продаж на англійському аукціоні", \
