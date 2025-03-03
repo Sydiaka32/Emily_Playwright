@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="created copy creation based on existing auction">
-      <change afterPath="$PROJECT_DIR$/locators/auction_details_locators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction_details_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_011allure_draft.py" afterDir="false" />
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="trying allure reporting">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locators/auction_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/auction_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/auction_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auction_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_06create_copy_based.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_06create_copy_based.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739626847510</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="trying allure reporting">
+      <option name="closed" value="true" />
+      <created>1741029208161</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1741029208161</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -234,6 +236,7 @@
     <MESSAGE value="changed comments for steps" />
     <MESSAGE value="refactored code with extracting auction id by using added previously fixture" />
     <MESSAGE value="created copy creation based on existing auction" />
-    <option name="LAST_COMMIT_MESSAGE" value="created copy creation based on existing auction" />
+    <MESSAGE value="trying allure reporting" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying allure reporting" />
   </component>
 </project>

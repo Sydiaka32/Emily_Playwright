@@ -3,4 +3,6 @@
 settings.py
 config.ini
 .venv
-
+allure-report/
+allure-results/
+node_modules/
