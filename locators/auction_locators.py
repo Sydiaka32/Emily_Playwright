@@ -13,7 +13,7 @@ class BasicInfoBlock:
 
     LOT_NUMBER = "Введіть номер лота"
     DESCRIPTION = "div:nth-child(2) > div > .MuiFormControl-root > .MuiInputBase-root > textarea"
-    PREVIOUS_AUCTION_ID = "Ідентифікатор попереднього аукціону"
+    PREVIOUS_AUCTION_ID = 'input[placeholder="LSE000-UA-YYYYMMDD-00000"]'
 
 
 class DetailLotDescriptionBlock:
