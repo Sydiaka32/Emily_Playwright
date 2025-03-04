@@ -1,4 +1,5 @@
 import pytest
+import allure
 from playwright.sync_api import sync_playwright
 from pages.login_page import LoginPage
 from pages.navigation_page import NavigationPage
@@ -49,4 +50,25 @@ def get_auction_id(navigate_to_my_auctions):
         return auction_id
 
     return _get_auction_id
+
+
+@pytest.fixture
+def allure_step_with_screenshot(page):
+    def _step(name, action):
+        with allure.step(name):
+            result = action()  # Run the provided action (function)
+            allure.attach(page.screenshot(), name=name, attachment_type=allure.attachment_type.PNG)
+            return result  # Return the result of the action if needed
+    return _step
+
+
+@pytest.fixture
+def allure_step(page):
+    def _step(name, action, take_screenshot=True):
+        with allure.step(name):
+            result = action()
+            if take_screenshot:
+                allure.attach(page.screenshot(), name=name, attachment_type=allure.attachment_type.PNG)
+            return result
+    return _step
 
