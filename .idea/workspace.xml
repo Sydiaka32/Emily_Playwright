@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="implemented working allure-reporting for the first case" />
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="extracted allure reporting to fixtures">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_011allure_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_011allure_draft.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741034186199</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="extracted allure reporting to fixtures">
+      <option name="closed" value="true" />
+      <created>1741120202033</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1741120202033</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -243,6 +255,7 @@
     <MESSAGE value="created copy creation based on existing auction" />
     <MESSAGE value="trying allure reporting" />
     <MESSAGE value="implemented working allure-reporting for the first case" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented working allure-reporting for the first case" />
+    <MESSAGE value="extracted allure reporting to fixtures" />
+    <option name="LAST_COMMIT_MESSAGE" value="extracted allure reporting to fixtures" />
   </component>
 </project>
