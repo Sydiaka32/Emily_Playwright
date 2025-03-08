@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="added allure steps to edit draft test">
-      <change beforePath="$PROJECT_DIR$/tests/test_03delete_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_03delete_draft.py" afterDir="false" />
-    </list>
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="added allure steps to publish draft test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -254,7 +252,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741426443627</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="added allure steps to delete draft test">
+      <option name="closed" value="true" />
+      <created>1741426949321</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1741426949321</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added allure steps to publish draft test">
+      <option name="closed" value="true" />
+      <created>1741427221240</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1741427221240</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -281,6 +295,8 @@
     <MESSAGE value="refactored the first test with fixtures" />
     <MESSAGE value="removed unnecessary fixture for taking step with screenshot" />
     <MESSAGE value="added allure steps to edit draft test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added allure steps to edit draft test" />
+    <MESSAGE value="added allure steps to delete draft test" />
+    <MESSAGE value="added allure steps to publish draft test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added allure steps to publish draft test" />
   </component>
 </project>
