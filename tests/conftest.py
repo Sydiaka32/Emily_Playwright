@@ -62,3 +62,21 @@ def allure_step(sync_page):
             return result
     return _step
 
+
+@pytest.fixture
+def capture_api_values(sync_page, get_auction_id):
+    captured_values = {}
+
+    # Define the callback function to capture API responses
+    def capture_api_response(response):
+        if "api/v1.0/auctions/" in response.url:
+            if response.status == 200:
+                data = response.json()
+                captured_values["previousAuctionId"] = data.get("previousProzorroAuctionId")
+                captured_values["discount"] = data.get("specificData", {}).get("discount")
+
+    # Listen for responses
+    sync_page.on("response", capture_api_response)
+
+    # Return the dictionary of captured values
+    return captured_values

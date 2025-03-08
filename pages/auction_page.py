@@ -88,4 +88,8 @@ class AuctionPage:
 
     def enable_discount(self):
         self.page.get_by_label(DetailLotDescriptionBlock.DISCOUNT_TOGGLE).check()
-        self.page.locator(DetailLotDescriptionBlock.DISCOUNT_FIELD).fill("2")
+        self.page.locator(DetailLotDescriptionBlock.DISCOUNT_FIELD).fill("2.0")
+
+    def get_discount_value(self):
+        discount_input = self.page.locator(DetailLotDescriptionBlock.DISCOUNT_INPUT_VALUE)
+        return discount_input.input_value()

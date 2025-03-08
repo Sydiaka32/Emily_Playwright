@@ -22,6 +22,7 @@ class DetailLotDescriptionBlock:
                 ".MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input")
     DISCOUNT_TOGGLE = "Знижка"
     DISCOUNT_FIELD = "//input[@name='specificData.discount']"
+    DISCOUNT_INPUT_VALUE = 'input[name="specificData.discount"]'
 
 
 class LotInfoBlock:

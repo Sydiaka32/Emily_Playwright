@@ -7,7 +7,7 @@ class MyAuctionsLocators:
     EDIT_OPTION = "Редагувати"
     DELETE_OPTION = "Видалити"
     PUBLISH_OPTION = "Опублікувати"
-    DETAILS_BUTTON = "Детальніше"
+    DETAILS_BUTTON = 'Детальніше'
     PUBLISHED_TAB = "Опубліковані"
 
     # Published
