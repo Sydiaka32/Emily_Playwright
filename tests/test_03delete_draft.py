@@ -2,22 +2,23 @@ from config.settings import ConfigParser
 from pages.my_auctions_page import MyAuctionsPage
 
 
-def test_delete_draft(navigate_to_my_auctions, get_auction_id):
+def test_delete_draft(navigate_to_my_auctions, get_auction_id, allure_step):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
     my_auctions_page = MyAuctionsPage(page)
     config_parser = ConfigParser()
 
     # Step 1: Retrieve the original auction ID using the fixture
-    auction_id = get_auction_id()
+    auction_id = allure_step("Retrieve auction id", get_auction_id(), take_screenshot=False)
 
     # Step 2: Delete draft
-    my_auctions_page.delete_option()
+    allure_step("Delete draft", my_auctions_page.delete_option(), take_screenshot=False)
 
     # Handle updating time
     page.wait_for_timeout(3000)
 
     # Step 3: Manually try to visit the auction details page
-    page.goto(f"{config_parser.base_url}/auctions/{auction_id}")  # Replace with actual URL format
+    allure_step("Manually try to visit deleted auction",
+                page.goto(f"{config_parser.base_url}/auctions/{auction_id}"), take_screenshot=True)
     page.wait_for_timeout(3000)
 
     # Step 4: Verify redirection

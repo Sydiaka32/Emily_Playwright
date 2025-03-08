@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="removed unnecessary fixture for taking step with screenshot">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_011allure_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_011allure_draft.py" afterDir="false" />
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="added allure steps to edit draft test">
+      <change beforePath="$PROJECT_DIR$/tests/test_03delete_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_03delete_draft.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741426022849</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added allure steps to edit draft test">
+      <option name="closed" value="true" />
+      <created>1741426443627</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1741426443627</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -274,6 +280,7 @@
     <MESSAGE value="extracted allure reporting to fixtures" />
     <MESSAGE value="refactored the first test with fixtures" />
     <MESSAGE value="removed unnecessary fixture for taking step with screenshot" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unnecessary fixture for taking step with screenshot" />
+    <MESSAGE value="added allure steps to edit draft test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added allure steps to edit draft test" />
   </component>
 </project>
