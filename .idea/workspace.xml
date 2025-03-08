@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="added allure steps to copy auction test">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="added allure steps to copy auction based test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_02edit_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_02edit_draft.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_06create_copy_based.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_06create_copy_based.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -279,11 +280,18 @@
       <option name="project" value="LOCAL" />
       <updated>1741428007071</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="added allure steps to copy auction based test">
+      <option name="closed" value="true" />
+      <created>1741429047510</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1741429047510</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding fixtures for browser start, login and navigation to the my-acutions page" />
     <MESSAGE value="Updating locators for notification popup and measure unit dropdown" />
     <MESSAGE value="Updating locators for auction card and related locators" />
     <MESSAGE value="Updated edit actions with waiting" />
@@ -308,6 +316,7 @@
     <MESSAGE value="added allure steps to delete draft test" />
     <MESSAGE value="added allure steps to publish draft test" />
     <MESSAGE value="added allure steps to copy auction test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added allure steps to copy auction test" />
+    <MESSAGE value="added allure steps to copy auction based test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added allure steps to copy auction based test" />
   </component>
 </project>

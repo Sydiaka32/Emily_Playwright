@@ -42,13 +42,7 @@ def test_create_copy(navigate_to_my_auctions, get_auction_id, allure_step):
 
     # Step 4: Verify information on auction details
 
-    # check discount
-    # discount_value = auction_details_page.get_discount_value()
-    # assert discount_value == '2', \
-    #     f"Discount is not the same as entered one! {discount_value} != '2'"
 
-    # check id of previous auction
-    auction_details_page.expand_details()
     previous_id_value = auction_details_page.get_previous_id_value()
     assert previous_id_value == previous_id, \
         f"Ids do not match! {previous_id_value} != {previous_id}"
