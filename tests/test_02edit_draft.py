@@ -2,16 +2,16 @@ from pages.my_auctions_page import MyAuctionsPage
 from pages.auction_page import AuctionPage
 
 
-def test_edit_draft(navigate_to_my_auctions):
+def test_edit_draft(navigate_to_my_auctions, allure_step):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
     my_auctions_page = MyAuctionsPage(page)
     auction_page = AuctionPage(page)
 
     # Step 1: Go to edit mode of draft and edit entities
-    my_auctions_page.edit_mode()
-    auction_page.edit_title()
+    allure_step("Open Edit mode", my_auctions_page.edit_mode(), take_screenshot=False)
+    allure_step("Edit title", auction_page.edit_title(), take_screenshot=True)
     page.wait_for_timeout(1000)
-    auction_page.save_changes()
+    allure_step("Save changes", auction_page.save_changes(), take_screenshot=False)
 
     # Handle updating time
     page.wait_for_timeout(2000)
