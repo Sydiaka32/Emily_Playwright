@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added lambda to make functions callable in tests via allure">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Fixed unexpected renaming of procedure">
+      <change afterPath="$PROJECT_DIR$/tests/test_07bank_aacounts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locators/auction_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/auction_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locators/my_auctions_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/my_auctions_locators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/auction_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auction_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_06create_copy_based.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_06create_copy_based.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,12 +297,26 @@
       <option name="project" value="LOCAL" />
       <updated>1741430340373</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Implemented test copy based">
+      <option name="closed" value="true" />
+      <created>1741436310793</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1741436310793</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Fixed unexpected renaming of procedure">
+      <option name="closed" value="true" />
+      <created>1741635673274</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1741635673274</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updating locators for auction card and related locators" />
-    <MESSAGE value="Updated edit actions with waiting" />
     <MESSAGE value="Removed exatra handling of popup" />
     <MESSAGE value="Removed extra steps for reaching my auction page" />
     <MESSAGE value="Updated test for deletion using new approach by extracting id from url" />
@@ -328,6 +340,8 @@
     <MESSAGE value="added allure steps to copy auction test" />
     <MESSAGE value="added allure steps to copy auction based test" />
     <MESSAGE value="Added lambda to make functions callable in tests via allure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added lambda to make functions callable in tests via allure" />
+    <MESSAGE value="Implemented test copy based" />
+    <MESSAGE value="Fixed unexpected renaming of procedure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed unexpected renaming of procedure" />
   </component>
 </project>

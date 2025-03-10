@@ -45,6 +45,9 @@ class BankAccounts:
                         "/following-sibling::div//button[.//*[@data-testid='AddCircleOutlineIcon']]")
     FILL_FROM_PROFILE_BUTTON = "Заповнити реквізити з мого профілю"
     REGISTRATION_FEE_OPTION = "Реєстраційний внесок"
+    OTHER_OPTION = "Інші платежі"
+    PAYMENT_OPTION = "Плата за лот"
+    GUARANTEE_OPTION = "Гарантійний внесок"
 
 
 class DocumentsBlock:

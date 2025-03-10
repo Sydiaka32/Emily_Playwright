@@ -1,7 +1,7 @@
 import re
 from playwright.sync_api import Page
 from locators.auction_locators import (OrganiserBlock, BasicInfoBlock, DetailLotDescriptionBlock,
-                                                           LotInfoBlock, DocumentsBlock, SubmitionBlock)
+                                                           LotInfoBlock, DocumentsBlock, SubmitionBlock, BankAccounts)
 from pathlib import Path
 
 
@@ -15,7 +15,8 @@ class AuctionPage:
 
     def select_procedure(self):
         self.page.locator(BasicInfoBlock.AUCTION_TYPE).click()
-        self.page.locator(BasicInfoBlock.BSE_OPTION).click()
+        self.page.get_by_role("option", name=BasicInfoBlock.BSE_OPTION).click()
+        # self.page.locator(BasicInfoBlock.BSE_OPTION).click()
 
     def fill_basic_info_block(self):
         self.page.get_by_placeholder(BasicInfoBlock.AUCTION_TITLE).first.fill('Auction')
@@ -93,3 +94,28 @@ class AuctionPage:
     def get_discount_value(self):
         discount_input = self.page.locator(DetailLotDescriptionBlock.DISCOUNT_INPUT_VALUE)
         return discount_input.input_value()
+
+    def add_bank_account(self):
+        self.page.locator(BankAccounts.ADD_BANK_ACCOUNT).first.click()
+
+    def add_registration_fee(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self. page.get_by_role("option", name=BankAccounts.REGISTRATION_FEE_OPTION).click()
+        self.page.get_by_role("button", name=BankAccounts.FILL_FROM_PROFILE_BUTTON).nth(1).click()
+
+    def add_other(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self. page.get_by_role("option", name=BankAccounts.OTHER_OPTION).click()
+        self.page.get_by_role("button", name=BankAccounts.FILL_FROM_PROFILE_BUTTON).nth(2).click()
+
+    def add_payment(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self. page.get_by_role("option", name=BankAccounts.PAYMENT_OPTION).click()
+        self.page.get_by_role("button", name=BankAccounts.FILL_FROM_PROFILE_BUTTON).nth(3).click()
+
+    def add_guarantee(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self. page.get_by_role("option", name=BankAccounts.GUARANTEE_OPTION).click()
+        self.page.get_by_role("button", name=BankAccounts.FILL_FROM_PROFILE_BUTTON).nth(4).click()
+
+
