@@ -43,12 +43,14 @@ class LotInfoBlock:
 class BankAccounts:
     ADD_BANK_ACCOUNT = ("//div[.//h6[contains(.,'Додати рахунок')]]"
                         "/following-sibling::div//button[.//*[@data-testid='AddCircleOutlineIcon']]")
-    FILL_FROM_PROFILE_BUTTON = "Заповнити реквізити з мого профілю"
+    FILL_FROM_PROFILE_BUTTON = ("(//button[contains(@class, 'MuiButton-root') "
+                                "and normalize-space()='Заповнити реквізити з мого профілю'])[last()]")
     REGISTRATION_FEE_OPTION = "Реєстраційний внесок"
     OTHER_OPTION = "Інші платежі"
     PAYMENT_OPTION = "Плата за лот"
     GUARANTEE_OPTION = "Гарантійний внесок"
-
+    CURRENCY_DROPDOWN = ("(//div[@role='combobox' and normalize-space()='UAH' "
+                         "and not(contains(@class, 'Mui-disabled'))])[last()]")
 
 class DocumentsBlock:
     DOCUMENT_UPLOAD = 'input[type="file"]'

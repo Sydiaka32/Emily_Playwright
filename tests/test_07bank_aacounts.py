@@ -54,6 +54,38 @@ def test_bank_accounts(navigate_to_my_auctions, allure_step):
 
     auction_page.add_guarantee()
 
+    auction_page.add_bank_account()
+
+    auction_page.add_registration_fee_usd()
+
+    auction_page.add_bank_account()
+
+    auction_page.add_payment_usd()
+
+    auction_page.add_bank_account()
+
+    auction_page.add_guarantee_usd()
+
+    auction_page.add_bank_account()
+
+    auction_page.add_other_usd()
+
+    auction_page.add_bank_account()
+
+    auction_page.add_registration_fee_eur()
+
+    auction_page.add_bank_account()
+
+    auction_page.add_other_eur()
+
+    auction_page.add_bank_account()
+
+    auction_page.add_payment_eur()
+
+    auction_page.add_bank_account()
+
+    auction_page.add_guarantee_eur()
+
     # Upload document
     auction_page.upload_document()
 

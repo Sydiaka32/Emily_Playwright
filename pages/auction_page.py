@@ -100,22 +100,83 @@ class AuctionPage:
 
     def add_registration_fee(self):
         self.page.get_by_label("", exact=True).nth(1).click()
-        self. page.get_by_role("option", name=BankAccounts.REGISTRATION_FEE_OPTION).click()
-        self.page.get_by_role("button", name=BankAccounts.FILL_FROM_PROFILE_BUTTON).nth(1).click()
+        self.page.get_by_role("option", name=BankAccounts.REGISTRATION_FEE_OPTION).click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
 
     def add_other(self):
         self.page.get_by_label("", exact=True).nth(1).click()
-        self. page.get_by_role("option", name=BankAccounts.OTHER_OPTION).click()
-        self.page.get_by_role("button", name=BankAccounts.FILL_FROM_PROFILE_BUTTON).nth(2).click()
+        self.page.get_by_role("option", name=BankAccounts.OTHER_OPTION).click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
 
     def add_payment(self):
         self.page.get_by_label("", exact=True).nth(1).click()
-        self. page.get_by_role("option", name=BankAccounts.PAYMENT_OPTION).click()
-        self.page.get_by_role("button", name=BankAccounts.FILL_FROM_PROFILE_BUTTON).nth(3).click()
+        self.page.get_by_role("option", name=BankAccounts.PAYMENT_OPTION).click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
 
     def add_guarantee(self):
         self.page.get_by_label("", exact=True).nth(1).click()
-        self. page.get_by_role("option", name=BankAccounts.GUARANTEE_OPTION).click()
-        self.page.get_by_role("button", name=BankAccounts.FILL_FROM_PROFILE_BUTTON).nth(4).click()
+        self.page.get_by_role("option", name=BankAccounts.GUARANTEE_OPTION).click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
+
+    def add_registration_fee_usd(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self.page.get_by_role("option", name=BankAccounts.REGISTRATION_FEE_OPTION).click()
+        self.page.locator(BankAccounts.CURRENCY_DROPDOWN).click()
+        self.page.get_by_role("option", name="USD").click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
+
+    def add_other_usd(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self.page.get_by_role("option", name=BankAccounts.OTHER_OPTION).click()
+        self.page.locator(BankAccounts.CURRENCY_DROPDOWN).click()
+        self.page.get_by_role("option", name="USD").click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
+
+    def add_payment_usd(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self.page.get_by_role("option", name=BankAccounts.PAYMENT_OPTION).click()
+        self.page.locator(BankAccounts.CURRENCY_DROPDOWN).click()
+        self.page.get_by_role("option", name="USD").click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
+
+    def add_guarantee_usd(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self.page.get_by_role("option", name=BankAccounts.GUARANTEE_OPTION).click()
+        self.page.locator(BankAccounts.CURRENCY_DROPDOWN).click()
+        self.page.get_by_role("option", name="USD").click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
+
+    def add_registration_fee_eur(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self.page.get_by_role("option", name=BankAccounts.REGISTRATION_FEE_OPTION).click()
+        self.page.locator(BankAccounts.CURRENCY_DROPDOWN).click()
+        self.page.get_by_role("option", name="EUR").click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
+
+    def add_other_eur(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self.page.get_by_role("option", name=BankAccounts.OTHER_OPTION).click()
+        self.page.locator(BankAccounts.CURRENCY_DROPDOWN).click()
+        self.page.get_by_role("option", name="EUR").click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
+
+    def add_payment_eur(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self.page.get_by_role("option", name=BankAccounts.PAYMENT_OPTION).click()
+        self.page.locator(BankAccounts.CURRENCY_DROPDOWN).click()
+        self.page.get_by_role("option", name="EUR").click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
+
+    def add_guarantee_eur(self):
+        self.page.get_by_label("", exact=True).nth(1).click()
+        self.page.get_by_role("option", name=BankAccounts.GUARANTEE_OPTION).click()
+        self.page.locator(BankAccounts.CURRENCY_DROPDOWN).click()
+        self.page.get_by_role("option", name="EUR").click()
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
+
+
+
+
+
 
 
