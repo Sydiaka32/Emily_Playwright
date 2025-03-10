@@ -5,7 +5,7 @@ class OrganiserBlock:
 
 class BasicInfoBlock:
     AUCTION_TYPE = 'text="Оберіть тип процедури"'
-    BSE_OPTION = 'role=option[name="Продаж на англійському аукціоні"]'
+    BSE_OPTION = "Продаж на \"англійському аукціоні\""
 
     #TODO Add more procedures here
 
@@ -39,6 +39,12 @@ class LotInfoBlock:
     #CLICK_MAP = page.locator("div").filter(has_text=re.compile(r"^\+− Leaflet \| © OpenStreetMap contributors$")).nth(1)
     COATUU = "div:nth-child(8) > div > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input"
 
+
+class BankAccounts:
+    ADD_BANK_ACCOUNT = ("//div[.//h6[contains(.,'Додати рахунок')]]"
+                        "/following-sibling::div//button[.//*[@data-testid='AddCircleOutlineIcon']]")
+    FILL_FROM_PROFILE_BUTTON = "Заповнити реквізити з мого профілю"
+    REGISTRATION_FEE_OPTION = "Реєстраційний внесок"
 
 
 class DocumentsBlock:

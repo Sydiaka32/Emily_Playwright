@@ -3,7 +3,7 @@ from pages.my_auctions_page import MyAuctionsPage
 from pages.auction_page import AuctionPage
 
 
-def test_creation_draft(navigate_to_my_auctions, allure_step_with_screenshot, allure_step):
+def test_creation_draft(navigate_to_my_auctions, allure_step):
     page = navigate_to_my_auctions
 
     my_auctions_page = MyAuctionsPage(page)
@@ -36,6 +36,6 @@ def test_creation_draft(navigate_to_my_auctions, allure_step_with_screenshot, al
     card_status = allure_step("Get card status", my_auctions_page.get_card_status, take_screenshot=False)
 
     assert card_title == "Auction", f"Expected title to be 'Auction', but got '{card_title}'"
-    assert card_procedure == "Продаж на англійському аукціоні", \
+    assert card_procedure == 'Продаж на "англійському аукціоні"', \
         f"Expected procedure to be 'Продаж на англійському аукціоні', but got '{card_procedure}'"
     assert card_status == "Чернетка", f"Expected status to be 'Чернетка', but got '{card_status}'"
