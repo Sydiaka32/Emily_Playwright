@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Implemented adding all types of bank accounts in UAH currency">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Implemented adding all types of bank accounts in all currencies">
+      <change afterPath="$PROJECT_DIR$/pages/bank_accounts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locators/auction_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/auction_locators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/auction_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auction_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my_auctions_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my_auctions_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_07bank_aacounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_07bank_aacounts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -321,11 +322,18 @@
       <option name="project" value="LOCAL" />
       <updated>1741636395312</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Implemented adding all types of bank accounts in all currencies">
+      <option name="closed" value="true" />
+      <created>1741639658027</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1741639658027</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed extra steps for reaching my auction page" />
     <MESSAGE value="Updated test for deletion using new approach by extracting id from url" />
     <MESSAGE value="Updated test for publication draft" />
     <MESSAGE value="Added test for creating copy of auction" />
@@ -350,6 +358,7 @@
     <MESSAGE value="Implemented test copy based" />
     <MESSAGE value="Fixed unexpected renaming of procedure" />
     <MESSAGE value="Implemented adding all types of bank accounts in UAH currency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented adding all types of bank accounts in UAH currency" />
+    <MESSAGE value="Implemented adding all types of bank accounts in all currencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented adding all types of bank accounts in all currencies" />
   </component>
 </project>

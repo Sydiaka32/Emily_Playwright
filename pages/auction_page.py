@@ -95,8 +95,8 @@ class AuctionPage:
         discount_input = self.page.locator(DetailLotDescriptionBlock.DISCOUNT_INPUT_VALUE)
         return discount_input.input_value()
 
-    def add_bank_account(self):
-        self.page.locator(BankAccounts.ADD_BANK_ACCOUNT).first.click()
+    # def add_bank_account(self):
+    #     self.page.locator(BankAccounts.ADD_BANK_ACCOUNT).first.click()
 
     def add_registration_fee(self):
         self.page.get_by_label("", exact=True).nth(1).click()
@@ -174,7 +174,34 @@ class AuctionPage:
         self.page.get_by_role("option", name="EUR").click()
         self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
 
+    def add_bank_account(self, account_type, currency=None):
+        """Adds a bank account with the given type and optional currency."""
+        self.page.locator(BankAccounts.ADD_BANK_ACCOUNT).first.click()  # Click 'Add Bank Account'
 
+        # Select bank account type
+        self.page.get_by_label("", exact=True).nth(1).click()
+
+        # Map account_type to the correct locator
+        account_type_mapping = {
+            BankAccounts.REGISTRATION_FEE_OPTION: BankAccounts.REGISTRATION_FEE_OPTION,
+            BankAccounts.OTHER_OPTION: BankAccounts.OTHER_OPTION,
+            BankAccounts.PAYMENT_OPTION: BankAccounts.PAYMENT_OPTION,
+            BankAccounts.GUARANTEE_OPTION: BankAccounts.GUARANTEE_OPTION,
+        }
+
+        # Select the corresponding option
+        if account_type in account_type_mapping:
+            self.page.get_by_role("option", name=account_type_mapping[account_type]).click()
+        else:
+            raise ValueError(f"Invalid account type: {account_type}")
+
+        # Select currency if provided
+        if currency:
+            self.page.locator(BankAccounts.CURRENCY_DROPDOWN).click()
+            self.page.get_by_role("option", name=currency).click()
+
+        # Click 'Fill from Profile' button
+        self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
 
 
 

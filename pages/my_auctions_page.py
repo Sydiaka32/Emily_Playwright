@@ -69,3 +69,9 @@ class MyAuctionsPage:
     def goto_auction_details(self):
         self.page.get_by_role("link", name=MyAuctionsLocators.DETAILS_BUTTON).first.click()
 
+
+
+
+
+
+
