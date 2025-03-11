@@ -128,16 +128,8 @@ pre-commit run --all-files
 
 # 📌 Managing Dependencies
 
-### Generate `requirements.txt` from Installed Packages:
-```sh
-pip freeze > requirements.txt
-```
-
 ### Install Dependencies from `requirements.txt`:
 ```sh
 pip install -r requirements.txt
 ```
-
----
-This document provides a structured guide to setting up and running tests in your project. Modify as needed based on your workflows! 🚀
 
