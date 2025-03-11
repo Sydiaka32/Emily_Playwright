@@ -67,12 +67,6 @@ allure generate reports/allure-results -o reports/allure-report --clean
 allure open reports/allure-report
 ```
 
-For Windows (if installed manually):
-```sh
-D:\allure-2.32.2\bin\allure generate reports/allure-results -o reports/allure-report --clean
-D:\allure-2.32.2\bin\allure open reports/allure-report
-```
-
 To remove previous Allure results:
 ```sh
 Remove-Item -Path "reports/allure-results/*" -Recurse -Force
@@ -106,30 +100,5 @@ You can set up GitHub Pages or another hosting service to share reports online.
 View available Pytest options:
 ```sh
 pytest --help
-```
-
-# 🚀 Pre-commit Hooks
-
-Run pre-commit checks automatically:
-```sh
-pre-commit install
-pre-commit install --hook-type commit-msg
-```
-
-Update pre-commit hooks:
-```sh
-pre-commit autoupdate
-```
-
-Run pre-commit checks manually on the entire project:
-```sh
-pre-commit run --all-files
-```
-
-# 📌 Managing Dependencies
-
-### Install Dependencies from `requirements.txt`:
-```sh
-pip install -r requirements.txt
 ```
 
