@@ -3,10 +3,8 @@
 | Tool                    | Description |
 |-------------------------|-------------|
 | `allure-pytest`        | Allure reporting with Pytest for better reporting |
-| `axe-playwright-python`| Python library for running accessibility checks with Playwright |
 | `playwright`           | Python library to automate Chromium, WebKit, and Firefox through a single API. |
 | `pytest`              | Popular testing framework for Python |
-| `pytest-base-url`     | Pytest plugin for setting a base URL for your tests |
 | `pytest-playwright`   | Pytest plugin for Playwright integration for browser automation testing |
 | `pytest-split`       | Pytest plugin that splits the test suite into equally sized sub-suites based on test execution time. |
 | `requests`           | Versatile library for making HTTP requests in Python |
