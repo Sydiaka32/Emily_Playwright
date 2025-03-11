@@ -15,7 +15,7 @@
 
 ## Clone the Project
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/Sydiaka32/Emily_Playwright.git
 cd <your-project-folder>
 ```
 
