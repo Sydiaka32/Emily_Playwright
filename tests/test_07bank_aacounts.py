@@ -53,5 +53,3 @@ def test_bank_accounts(navigate_to_my_auctions, allure_step):
     allure_step("Save draft", lambda: auction_page.save_draft())
 
     page.wait_for_timeout(3000)
-
-

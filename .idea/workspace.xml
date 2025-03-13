@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added requirements.txt file">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Refactored test creation draft with fixture">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/auction_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auction_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my_auctions_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my_auctions_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_01creation_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_01creation_draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_07bank_aacounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_07bank_aacounts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -346,13 +343,34 @@
       <option name="project" value="LOCAL" />
       <updated>1741721441793</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Removed creation draft into fixture">
+      <option name="closed" value="true" />
+      <created>1741893049507</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1741893049507</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Added methods for custom waitings">
+      <option name="closed" value="true" />
+      <created>1741893089303</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1741893089303</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Refactored test creation draft with fixture">
+      <option name="closed" value="true" />
+      <created>1741893112968</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1741893112968</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added test for creating copy of auction" />
-    <MESSAGE value="renaming test" />
-    <MESSAGE value="retrieving duplicated code into the fixture" />
     <MESSAGE value="updated logic for copy creation to prevent fails due to draft auctions" />
     <MESSAGE value="trying to implement logic with continuous checking for notifications" />
     <MESSAGE value="changed comments for steps" />
@@ -375,6 +393,9 @@
     <MESSAGE value="Implemented adding all types of bank accounts in all currencies" />
     <MESSAGE value="Refactored bank accounts test to prevent a lot of duplicated code" />
     <MESSAGE value="Added requirements.txt file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added requirements.txt file" />
+    <MESSAGE value="Removed creation draft into fixture" />
+    <MESSAGE value="Added methods for custom waitings" />
+    <MESSAGE value="Refactored test creation draft with fixture" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored test creation draft with fixture" />
   </component>
 </project>
