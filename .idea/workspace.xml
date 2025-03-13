@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Implemented adding all types of bank accounts in all currencies">
-      <change afterPath="$PROJECT_DIR$/pages/bank_accounts.py" afterDir="false" />
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added requirements.txt file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/auction_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auction_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my_auctions_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my_auctions_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_07bank_aacounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_07bank_aacounts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_01creation_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_01creation_draft.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,12 +330,26 @@
       <option name="project" value="LOCAL" />
       <updated>1741639658027</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Refactored bank accounts test to prevent a lot of duplicated code">
+      <option name="closed" value="true" />
+      <created>1741721036215</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1741721036215</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added requirements.txt file">
+      <option name="closed" value="true" />
+      <created>1741721441793</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1741721441793</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated test for deletion using new approach by extracting id from url" />
-    <MESSAGE value="Updated test for publication draft" />
     <MESSAGE value="Added test for creating copy of auction" />
     <MESSAGE value="renaming test" />
     <MESSAGE value="retrieving duplicated code into the fixture" />
@@ -359,6 +373,8 @@
     <MESSAGE value="Fixed unexpected renaming of procedure" />
     <MESSAGE value="Implemented adding all types of bank accounts in UAH currency" />
     <MESSAGE value="Implemented adding all types of bank accounts in all currencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented adding all types of bank accounts in all currencies" />
+    <MESSAGE value="Refactored bank accounts test to prevent a lot of duplicated code" />
+    <MESSAGE value="Added requirements.txt file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added requirements.txt file" />
   </component>
 </project>
