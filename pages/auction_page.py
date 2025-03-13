@@ -1,8 +1,10 @@
 import re
-from playwright.sync_api import Page
+from playwright.sync_api import Page, expect
 from locators.auction_locators import (OrganiserBlock, BasicInfoBlock, DetailLotDescriptionBlock,
                                                            LotInfoBlock, DocumentsBlock, SubmitionBlock, BankAccounts)
 from pathlib import Path
+from pages.my_auctions_page import MyAuctionsPage
+
 
 
 class AuctionPage:
@@ -203,7 +205,16 @@ class AuctionPage:
         # Click 'Fill from Profile' button
         self.page.locator(BankAccounts.FILL_FROM_PROFILE_BUTTON).click()
 
+    def wait_for_upload_ready(self):
+        """Waits until the upload document button is enabled (or any suitable condition)."""
+        upload_button = self.page.locator(DocumentsBlock.DOCUMENT_UPLOAD)
+        expect(upload_button).to_be_enabled(timeout=5000)
 
+    def wait_for_draft_saved(self):
+        """Waits at least 4 seconds, then ensures the user is redirected to 'my-auctions' page."""
+        # Wait for 4 seconds to handle slow document uploads or backend delays
+        self.page.wait_for_timeout(4000)
 
-
+        # After the wait, ensure the URL redirects to the 'my-auctions' page
+        self.page.wait_for_url("**/my-auctions", timeout=10000)
 

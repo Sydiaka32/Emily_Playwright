@@ -14,6 +14,9 @@ class MyAuctionsPage:
         # Replace with the locator for the title field in the card
         return self.page.locator(MyAuctionsLocators.CARD_TITLE).inner_text()
 
+    def get_card_title_locator(self):
+        return self.page.locator(MyAuctionsLocators.CARD_TITLE)
+
     def get_card_procedure(self):
         # Replace with the locator for the procedure field in the card
         return self.page.locator(MyAuctionsLocators.CARD_PROCEDURE).inner_text()
