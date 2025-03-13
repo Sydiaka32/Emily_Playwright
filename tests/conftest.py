@@ -4,6 +4,7 @@ from playwright.sync_api import sync_playwright
 from pages.login_page import LoginPage
 from pages.navigation_page import NavigationPage
 from pages.my_auctions_page import MyAuctionsPage
+from pages.auction_page import AuctionPage
 
 
 @pytest.fixture(scope="function")
@@ -80,3 +81,39 @@ def capture_api_values(sync_page, get_auction_id):
 
     # Return the dictionary of captured values
     return captured_values
+
+
+@pytest.fixture
+def create_draft_auction(navigate_to_my_auctions, allure_step):
+    """Fixture to create a draft auction and return auction details."""
+    page = navigate_to_my_auctions
+
+    my_auctions_page = MyAuctionsPage(page)
+    auction_page = AuctionPage(page)
+    navigation_page = NavigationPage(page)
+
+    # Auction creation steps
+    allure_step("Navigate to 'New Auction' page", my_auctions_page.navigate_to_new_auction, take_screenshot=False)
+    allure_step("Select organiser", auction_page.select_organiser, take_screenshot=False)
+    allure_step("Select procedure", auction_page.select_procedure, take_screenshot=False)
+    allure_step("Close Telegram popup", navigation_page.close_telegram_popup, take_screenshot=False)
+    allure_step("Fill in Basic info block", auction_page.fill_basic_info_block, take_screenshot=True)
+    allure_step("Fill in Details block", auction_page.fill_detail_lot_description_block, take_screenshot=True)
+    allure_step("Select classifier", auction_page.select_classifier, take_screenshot=True)
+    allure_step("Fill in Lot info block", auction_page.fill_lot_info_block, take_screenshot=False)
+    allure_step("Point map", auction_page.point_map, take_screenshot=True)
+
+    # Avoid hardcoded waits — wait for elements instead
+    auction_page.wait_for_upload_ready()
+
+    allure_step("Upload document", auction_page.upload_document, take_screenshot=False)
+    allure_step("Save draft", auction_page.save_draft, take_screenshot=False)
+
+    auction_page.wait_for_draft_saved()
+
+    # Return auction details for further assertions in tests
+    return {
+        "title": my_auctions_page.get_card_title(),
+        "procedure": my_auctions_page.get_card_procedure(),
+        "status": my_auctions_page.get_card_status()
+    }
