@@ -55,3 +55,5 @@ def test_create_copy_based(navigate_to_my_auctions, get_auction_id, allure_step,
     assert float(captured_values.get("discount")) == float(discount_value), \
         f"API Discount does not match! Expected {discount_value}, got {captured_values.get('discount')}"
 
+    assert captured_values.get("isPerishable") == 'true', \
+        f"API Discount does not match! Expected 'isPerishable', got {captured_values.get('isPerishable')}"

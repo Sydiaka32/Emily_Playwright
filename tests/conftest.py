@@ -5,6 +5,7 @@ from pages.login_page import LoginPage
 from pages.navigation_page import NavigationPage
 from pages.my_auctions_page import MyAuctionsPage
 from pages.auction_page import AuctionPage
+import re
 
 
 @pytest.fixture(scope="function")
@@ -68,19 +69,26 @@ def allure_step(sync_page):
 def capture_api_values(sync_page, get_auction_id):
     captured_values = {}
 
-    # Define the callback function to capture API responses
+    # Capture API responses only for the right endpoint
     def capture_api_response(response):
-        if "api/v1.0/auctions/" in response.url:
-            if response.status == 200:
-                data = response.json()
-                captured_values["previousAuctionId"] = data.get("previousProzorroAuctionId")
-                captured_values["discount"] = data.get("specificData", {}).get("discount")
+        if "api/v1.0/auctions/" in response.url and response.status == 200:
+            data = response.json()
+            captured_values["previousAuctionId"] = data.get("previousProzorroAuctionId")
+            captured_values["discount"] = data.get("specificData", {}).get("discount")
+            captured_values["isPerishable"] = data.get("specificData", {}).get("isPerishable")
 
-    # Listen for responses
+            # Debug print for clarity
+            print(f"Captured Data: {captured_values}")
+
+    # Hook into page responses
     sync_page.on("response", capture_api_response)
 
-    # Return the dictionary of captured values
-    return captured_values
+    # Ensure a fresh start for each test
+    yield captured_values
+
+    # Clean up listener after test
+    sync_page.remove_listener("response", capture_api_response)
+
 
 
 @pytest.fixture

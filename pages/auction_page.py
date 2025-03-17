@@ -32,7 +32,14 @@ class AuctionPage:
 
     def select_classifier(self):
         self.page.get_by_placeholder(LotInfoBlock.CLASSIFIER).click()
-        self.page.get_by_role("treeitem", name=LotInfoBlock.SELECT_CLASSIFIER).get_by_role(LotInfoBlock.CHECKBOX_CLASSIFIER).check()
+        (self.page.get_by_role("treeitem", name=LotInfoBlock.SELECT_CLASSIFIER).
+         get_by_role(LotInfoBlock.CHECKBOX_CLASSIFIER).check())
+        self.page.get_by_role("button", name=LotInfoBlock.SUBMIT_CLASSIFIER).click()
+
+    def select_perishable_classifier(self):
+        self.page.get_by_placeholder(LotInfoBlock.CLASSIFIER).click()
+        (self.page.get_by_role("treeitem", name=LotInfoBlock.SELECT_PERISHABLE).
+         get_by_role(LotInfoBlock.CHECKBOX_CLASSIFIER).check())
         self.page.get_by_role("button", name=LotInfoBlock.SUBMIT_CLASSIFIER).click()
 
     def fill_lot_info_block(self):

@@ -28,6 +28,7 @@ class DetailLotDescriptionBlock:
 class LotInfoBlock:
     CLASSIFIER = "Оберіть основний класифікатор"
     SELECT_CLASSIFIER = "18000000-9"
+    SELECT_PERISHABLE = "15000000-8"
     CHECKBOX_CLASSIFIER = "checkbox"
     SUBMIT_CLASSIFIER = "Обрати"
     LOT_QUANTITY = "input[name=\"specificData\\.lots\\.0\\.quantity\"]"
