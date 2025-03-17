@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Tried to refactor test using fixture">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Implemented is perishable test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locators/auction_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/auction_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/auction_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auction_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_011allure_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_08allure_draft.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_06create_copy_based.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_06create_copy_based.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_08is_perishable.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_08is_perishable.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,11 +375,18 @@
       <option name="project" value="LOCAL" />
       <updated>1741894515965</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Implemented is perishable test">
+      <option name="closed" value="true" />
+      <created>1742244588233</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1742244588233</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="trying to implement logic with continuous checking for notifications" />
     <MESSAGE value="changed comments for steps" />
     <MESSAGE value="refactored code with extracting auction id by using added previously fixture" />
     <MESSAGE value="created copy creation based on existing auction" />
@@ -408,6 +411,7 @@
     <MESSAGE value="Added methods for custom waitings" />
     <MESSAGE value="Refactored test creation draft with fixture" />
     <MESSAGE value="Tried to refactor test using fixture" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to refactor test using fixture" />
+    <MESSAGE value="Implemented is perishable test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented is perishable test" />
   </component>
 </project>
