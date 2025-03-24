@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Implemented is perishable test">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Tried to figure out why its works this way but not immediately after publish">
+      <change afterPath="$PROJECT_DIR$/tests/test_09creation_draft_application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Emily_Plawright.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Emily_Plawright.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_08is_perishable.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_08is_perishable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_01creation_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_01creation_draft.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +49,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Automation/Emily_Plawright/.venv/Scripts/python.exe",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Automation\Emily_Plawright" />
@@ -58,7 +67,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
+        <option value="bundled-python-sdk-4f4e415b4190-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -383,11 +392,18 @@
       <option name="project" value="LOCAL" />
       <updated>1742244588233</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Tried to figure out why its works this way but not immediately after publish">
+      <option name="closed" value="true" />
+      <created>1742245311377</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1742245311377</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed comments for steps" />
     <MESSAGE value="refactored code with extracting auction id by using added previously fixture" />
     <MESSAGE value="created copy creation based on existing auction" />
     <MESSAGE value="trying allure reporting" />
@@ -412,6 +428,7 @@
     <MESSAGE value="Refactored test creation draft with fixture" />
     <MESSAGE value="Tried to refactor test using fixture" />
     <MESSAGE value="Implemented is perishable test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented is perishable test" />
+    <MESSAGE value="Tried to figure out why its works this way but not immediately after publish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to figure out why its works this way but not immediately after publish" />
   </component>
 </project>

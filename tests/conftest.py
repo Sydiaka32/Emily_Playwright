@@ -20,10 +20,26 @@ def sync_page():
 
 
 @pytest.fixture
-def login(sync_page):
-    """Login fixture using sync page"""
+def login(sync_page, request):
+    """Login fixture that supports multiple user roles."""
     login_page = LoginPage(sync_page)
-    login_page.login_t1()
+
+    # Take user role from the parametrize decorator (default to t1)
+    user_role = request.param if hasattr(request, "param") else "t1"
+
+    # Handle login for different roles
+    if user_role == "t1":
+        login_page.login_t1()
+    elif user_role == "t3":
+        login_page.login_t3()
+    elif user_role == "mv":
+        login_page.login_mv()
+    elif user_role == "admin":
+        login_page.login_ad()
+    else:
+        raise ValueError(f"Unsupported user role: {user_role}")
+
+    # Return the logged-in page for further testing
     return sync_page
 
 

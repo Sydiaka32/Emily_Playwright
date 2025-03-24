@@ -1,4 +1,8 @@
-def test_creation_draft(create_draft_auction):
+import pytest
+
+
+@pytest.mark.parametrize('login', ['t1'], indirect=True)
+def test_creation_draft(create_draft_auction, login):
     """Test that a draft auction is created successfully."""
     auction_data = create_draft_auction
 

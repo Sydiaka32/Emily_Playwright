@@ -1,7 +1,9 @@
+import pytest
+
 from pages.my_auctions_page import MyAuctionsPage
 from pages.navigation_page import NavigationPage
 
-
+@pytest.mark.parametrize('login', ['t1'], indirect=True)
 def test_publish_draft(navigate_to_my_auctions, allure_step):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
     my_auctions_page = MyAuctionsPage(page)

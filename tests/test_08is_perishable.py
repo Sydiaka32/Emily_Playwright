@@ -1,8 +1,10 @@
+import pytest
+
 from pages.navigation_page import NavigationPage
 from pages.auction_page import AuctionPage
 from pages.my_auctions_page import MyAuctionsPage
 
-
+@pytest.mark.parametrize('login', ['t1'], indirect=True)
 def test_is_perishable(navigate_to_my_auctions, get_auction_id, allure_step, capture_api_values):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
     my_auctions_page = MyAuctionsPage(page)
