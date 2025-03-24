@@ -1,0 +1,180 @@
+import requests
+from config.settings import ConfigParser
+
+
+def api_login():
+    """Logs in and returns the access token."""
+    url = f"{ConfigParser.base_url}/auth/api/v1.0/users/login"
+    payload = {
+        "email": ConfigParser.email_t1,
+        "password": ConfigParser.password_user
+    }
+
+    response = requests.post(url, json=payload)
+
+    if response.status_code == 200:
+        json_data = response.json()
+        return json_data.get("accessToken")  # Return the token
+    else:
+        raise Exception(f"Login failed: {response.status_code}, {response.text}")
+
+
+def upload_document():
+    """Uploads a document for a given auction via API and returns the document ID."""
+
+    # Get the token by logging in
+    token = api_login()  # Call api_login to get the token
+    document_path = r"D:\Automation\Emily_Plawright\utils\attachments\Test_PDF.pdf"  # Hardcoded document path
+
+    url = (f"{ConfigParser.base_url}api/v1.0/auctions/documents"
+           f"/upload?documentType=TECHNICAL_SPECIFICATIONS&auctionType=BASIC_SELL_ENGLISH")
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+    }
+
+    with open(document_path, 'rb') as file:
+        files = {'file': file}
+
+        # Step 4: Send the POST request to upload the document
+        response = requests.post(url, headers=headers, files=files)
+
+    # Step 5: Handle response and extract document ID
+    if response.status_code == 200:
+        json_data = response.json()
+        document_id = json_data.get("id")
+        print(f"Document uploaded successfully. Document ID: {document_id}")
+        return document_id
+    else:
+        raise Exception(f"Failed to upload document: {response.status_code}, {response.text}")
+
+
+def generate_fast_manual_time():
+    """Generates the start time for the auction by adding 32 minutes to the current time."""
+    from datetime import datetime, timedelta
+
+    now = datetime.now()
+    future_time = now + timedelta(minutes=32)
+    return future_time.isoformat()
+
+
+def create_auction():
+    """Creates an auction with the given document ID."""
+    # Step 1: Get the token by logging in
+    token = api_login()  # Use the api_login function to get the token
+    document_id = upload_document()
+
+    # Step 2: Prepare auction data
+    fast_time = generate_fast_manual_time()  # Generate fast manual time
+    url = f"{ConfigParser.base_url}/api/v1.0/auctions"
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+    }
+
+    auction_data = {
+        "bankAccounts": [
+            {
+                "type": "GUARANTEE",
+                "bankAccounts": [
+                    {
+                        "bankName": "mono",
+                        "currency": "UAH",
+                        "holderLegalName": "Brandon",
+                        "holderIdentifierScheme": "UA-EDR",
+                        "holderIdentifier": "00120145",
+                        "identifiers": [
+                            {
+                                "scheme": "UA-IBAN",
+                                "id": "UA121111110000012001234567896"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "attempts": 1,
+        "description": "sadfas dasd fasdfs",
+        "name": "Automation",
+        "subtype": "FAST_MANUAL",
+        "type": "BASIC_SELL_ENGLISH",
+        "userProfileId": 73,
+        "startedAt": fast_time,  # Use the generated fast time
+        "lotNumber": "1",
+        "accessDetails": None,
+        "currency": "UAH",
+        "initialAmount": 1200,
+        "includePdv": True,
+        "specificData": {
+            "documentRequirements": None,
+            "additionalInformation": None,
+            "valueAddedTaxCharged": False,
+            "guaranteeAmount": 360,
+            "registrationAmount": 17,
+            "lots": [
+                {
+                    "address": {
+                        "city": "Красностав",
+                        "country": "Україна",
+                        "region": "Хмельницька область",
+                        "addressID": "0500000000",
+                        "zipCode": "30085",
+                        "street": None
+                    },
+                    "additionalClassifications": [],
+                    "cav": "19000000-6",
+                    "description": "asd asd fsdfs",
+                    "measureUnit": "IE",
+                    "quantity": 43,
+                    "location": {
+                        "latitude": 50.40118706890082,
+                        "longitude": 27.180175781250004
+                    },
+                    "props": None
+                }
+            ],
+            "isPerishable": False,
+            "stepAmount": 14.4,
+            "minNumberOfQualifiedBids": 2
+        },
+        "documents": [
+            {
+                "id": document_id  # Attach the document ID
+            }
+        ]
+    }
+
+    # Step 3: Send the POST request to create the auction
+    response = requests.post(url, json=auction_data, headers=headers)
+
+    # Step 4: Handle response and extract auction ID
+    if response.status_code == 200:
+        json_data = response.json()
+        auction_id = json_data.get("id")
+        print(f"Auction created successfully. Auction ID: {auction_id}")
+        return auction_id
+    else:
+        raise Exception(f"Failed to create auction: {response.status_code}, {response.text}")
+
+
+def publish_auction():
+    """Publishes the auction with the given draft ID."""
+    # Step 1: Get the token by logging in
+    token = api_login()  # Use the api_login function to get the token
+    draft_id = create_auction()
+
+    # Step 2: Prepare the URL and headers
+    url = f"{ConfigParser.base_url}/api/v1.0/auctions/{draft_id}/publish"
+    headers = {
+        "Authorization": f"Bearer {token}",
+    }
+
+    # Step 3: Send the POST request to publish the auction
+    response = requests.post(url, headers=headers)
+
+    # Step 4: Handle response
+    if response.status_code == 200:
+        print(f"Auction {draft_id} published successfully.")
+        return response.json()  # You can return the response if needed
+    else:
+        raise Exception(f"Failed to publish auction {draft_id}: {response.status_code}, {response.text}")

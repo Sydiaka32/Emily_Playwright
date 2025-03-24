@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Refactorred login fixture for more flexible usage. Parametrized tests" />
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added login fixture to each test">
+      <change afterPath="$PROJECT_DIR$/utils/api_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -400,11 +403,18 @@
       <option name="project" value="LOCAL" />
       <updated>1742844840048</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Added login fixture to each test">
+      <option name="closed" value="true" />
+      <created>1742845138897</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1742845138897</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created copy creation based on existing auction" />
     <MESSAGE value="trying allure reporting" />
     <MESSAGE value="implemented working allure-reporting for the first case" />
     <MESSAGE value="extracted allure reporting to fixtures" />
@@ -429,6 +439,7 @@
     <MESSAGE value="Implemented is perishable test" />
     <MESSAGE value="Tried to figure out why its works this way but not immediately after publish" />
     <MESSAGE value="Refactorred login fixture for more flexible usage. Parametrized tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactorred login fixture for more flexible usage. Parametrized tests" />
+    <MESSAGE value="Added login fixture to each test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added login fixture to each test" />
   </component>
 </project>
