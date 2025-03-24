@@ -4,7 +4,7 @@ from pages.auction_page import AuctionPage
 from pages.my_auctions_page import MyAuctionsPage
 
 @pytest.mark.parametrize('login', ['t1'], indirect=True)
-def test_create_copy_based(navigate_to_my_auctions, get_auction_id, allure_step, capture_api_values):
+def test_create_copy_based(navigate_to_my_auctions, get_auction_id, allure_step, capture_api_values, login):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
     my_auctions_page = MyAuctionsPage(page)
     auction_page = AuctionPage(page)

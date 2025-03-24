@@ -5,7 +5,7 @@ from pages.auction_page import AuctionPage
 
 
 @pytest.mark.parametrize('login', ['t1'], indirect=True)
-def test_edit_draft(navigate_to_my_auctions, allure_step):
+def test_edit_draft(navigate_to_my_auctions, allure_step, login):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
     my_auctions_page = MyAuctionsPage(page)
     auction_page = AuctionPage(page)

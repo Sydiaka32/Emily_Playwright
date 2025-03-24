@@ -4,7 +4,7 @@ from config.settings import ConfigParser
 from pages.my_auctions_page import MyAuctionsPage
 
 @pytest.mark.parametrize('login', ['t1'], indirect=True)
-def test_delete_draft(navigate_to_my_auctions, get_auction_id, allure_step):
+def test_delete_draft(navigate_to_my_auctions, get_auction_id, allure_step, login):
     page = navigate_to_my_auctions  # The browser object passed by the fixture
     my_auctions_page = MyAuctionsPage(page)
     config_parser = ConfigParser()
