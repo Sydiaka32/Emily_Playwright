@@ -1,5 +1,7 @@
 import requests
 from config.settings import ConfigParser
+from datetime import datetime, timedelta, timezone
+
 
 
 def api_login():
@@ -26,7 +28,7 @@ def upload_document():
     token = api_login()  # Call api_login to get the token
     document_path = r"D:\Automation\Emily_Plawright\utils\attachments\Test_PDF.pdf"  # Hardcoded document path
 
-    url = (f"{ConfigParser.base_url}api/v1.0/auctions/documents"
+    url = (f"{ConfigParser.base_url}/api/v1.0/auctions/documents"
            f"/upload?documentType=TECHNICAL_SPECIFICATIONS&auctionType=BASIC_SELL_ENGLISH")
 
     headers = {
@@ -50,12 +52,12 @@ def upload_document():
 
 
 def generate_fast_manual_time():
-    """Generates the start time for the auction by adding 32 minutes to the current time."""
-    from datetime import datetime, timedelta
-
-    now = datetime.now()
+    """Generates the start time for the auction by adding 32 minutes to the current time in UTC."""
+    now = datetime.now(timezone.utc)  # Ensure UTC timezone
     future_time = now + timedelta(minutes=32)
-    return future_time.isoformat()
+    return future_time.isoformat()  # This will return in the format "2025-03-26T18:10:46+00:00"
+
+# Example output: "2025-03-26T19:00:00+00:00"
 
 
 def create_auction():

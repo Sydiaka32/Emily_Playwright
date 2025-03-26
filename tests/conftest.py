@@ -5,7 +5,8 @@ from pages.login_page import LoginPage
 from pages.navigation_page import NavigationPage
 from pages.my_auctions_page import MyAuctionsPage
 from pages.auction_page import AuctionPage
-import re
+from utils.api_utils import api_login, upload_document, create_auction, publish_auction
+
 
 
 @pytest.fixture(scope="function")
@@ -141,3 +142,29 @@ def create_draft_auction(navigate_to_my_auctions, allure_step):
         "procedure": my_auctions_page.get_card_procedure(),
         "status": my_auctions_page.get_card_status()
     }
+
+
+@pytest.fixture(scope="function")
+def published_auction():
+    """
+    Fixture to log in, upload a document, create an auction, publish it,
+    and extract the prozorroId.
+    Returns the prozorroId for use in search tests.
+    """
+    # Step 1: Upload a document
+    document_id = upload_document()
+
+    # Step 2: Create the auction using the document_id
+    auction_id = create_auction()
+
+    # Step 3: Publish the auction and get the response
+    publish_response = publish_auction()
+
+    # Step 4: Extract prozorroId
+    prozorro_id = publish_response.get("prozorroId")
+
+    if not prozorro_id:
+        raise ValueError("Prozorro ID is missing in the response")
+
+    # Return the prozorroId for use in test cases
+    yield prozorro_id

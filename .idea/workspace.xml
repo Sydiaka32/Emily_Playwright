@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added login fixture to each test">
-      <change afterPath="$PROJECT_DIR$/utils/api_utils.py" afterDir="false" />
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Implemented api_utils for creating and publishing auction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_09creation_draft_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_09creation_draft_application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/api_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +31,12 @@
     &quot;assignee&quot;: &quot;Sydiaka32&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Sydiaka32/Emily_Playwright.git",
-    "accountId": "7077ea58-5edf-4a28-821a-b82ff92ab988"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Sydiaka32/Emily_Playwright.git&quot;,
+    &quot;accountId&quot;: &quot;7077ea58-5edf-4a28-821a-b82ff92ab988&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -44,16 +46,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Automation/Emily_Plawright/.venv/Scripts/python.exe",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Automation/Emily_Plawright/.venv/Scripts/python.exe&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Automation\Emily_Plawright" />
@@ -411,11 +413,18 @@
       <option name="project" value="LOCAL" />
       <updated>1742845138897</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Implemented api_utils for creating and publishing auction">
+      <option name="closed" value="true" />
+      <created>1742848936567</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1742848936567</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="trying allure reporting" />
     <MESSAGE value="implemented working allure-reporting for the first case" />
     <MESSAGE value="extracted allure reporting to fixtures" />
     <MESSAGE value="refactored the first test with fixtures" />
@@ -440,6 +449,7 @@
     <MESSAGE value="Tried to figure out why its works this way but not immediately after publish" />
     <MESSAGE value="Refactorred login fixture for more flexible usage. Parametrized tests" />
     <MESSAGE value="Added login fixture to each test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added login fixture to each test" />
+    <MESSAGE value="Implemented api_utils for creating and publishing auction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented api_utils for creating and publishing auction" />
   </component>
 </project>
