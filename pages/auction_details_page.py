@@ -42,3 +42,6 @@ class AuctionDetailsPage:
         displayed_value = previous_id_locator.inner_text()
         return displayed_value
 
+    def apply_for_auction(self):
+        # Replace with the locator for the procedure field in the card
+        self.page.get_by_role("button", name="Взяти участь").click()

@@ -9,6 +9,18 @@ def test_creation_draft_application(navigate_to_my_auctions, published_auction, 
     my_auctions_page = MyAuctionsPage(page)
     auction_page = AuctionPage(page)
 
+    # Step 1 - Search for auction
+
+    # Step 2 - Go to details
+
+    # Step 3 - Click on apply
+
+    # Step 4 - Select profile + fill in the price
+
+    # Step 5 - Upload documents if needed
+
+    # Step 6 - Save draft
+
     prozorro_id = published_auction  # Get prozorroId from fixture
     assert prozorro_id, "prozorroId is missing from published auction"
 
