@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Created application and all auctions pages and locators">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Implemented navigation to auction details">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locators/all_auctions_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/all_auctions_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/all_auctions_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/all_auctions_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/navigation_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/navigation_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locators/auction_details_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/auction_details_locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auction_details_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auction_details_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_09creation_draft_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_09creation_draft_application.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -439,11 +437,18 @@
       <option name="project" value="LOCAL" />
       <updated>1743103358821</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Implemented navigation to auction details">
+      <option name="closed" value="true" />
+      <created>1743446990513</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1743446990513</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactored the first test with fixtures" />
     <MESSAGE value="removed unnecessary fixture for taking step with screenshot" />
     <MESSAGE value="added allure steps to edit draft test" />
     <MESSAGE value="added allure steps to delete draft test" />
@@ -468,6 +473,7 @@
     <MESSAGE value="Implemented api_utils for creating and publishing auction" />
     <MESSAGE value="Implemented and tested fixture for creating auction before tests via api" />
     <MESSAGE value="Created application and all auctions pages and locators" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created application and all auctions pages and locators" />
+    <MESSAGE value="Implemented navigation to auction details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented navigation to auction details" />
   </component>
 </project>
