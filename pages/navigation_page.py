@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
 from locators.account_locators import AccountLocators
+from config.settings import ConfigParser
 
 
 class NavigationPage:
@@ -24,6 +25,12 @@ class NavigationPage:
         #     -1)
         # element.click()
         self.page.get_by_test_id("CloseIcon").nth(1).click()
+
+    def navigate_to_home(self):
+        """Navigates to the home page after login, using the configured base URL."""
+        home_url = f"{ConfigParser.base_url}/auctions?size=5&status=ACTIVE_TENDERING&procedureType=all"
+        self.page.goto(home_url)
+        self.page.wait_for_load_state("domcontentloaded")
 
 
 

@@ -40,16 +40,17 @@ def login(sync_page, request):
     else:
         raise ValueError(f"Unsupported user role: {user_role}")
 
-    # Return the logged-in page for further testing
+    # Ensure navigation to home after login
+    navigation_page = NavigationPage(sync_page)
+    navigation_page.navigate_to_home()  # Navigate to auctions page after login
+
     return sync_page
 
 
-@pytest.fixture
-def navigate_to_my_auctions(login):
-    """Navigation fixture using sync page"""
-    navigation_page = NavigationPage(login)
+def navigate_to_my_auctions(sync_page):
+    """Navigation helper function"""
+    navigation_page = NavigationPage(sync_page)
     navigation_page.navigate_to_my_auctions()
-    return login
 
 
 @pytest.fixture
