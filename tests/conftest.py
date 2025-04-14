@@ -1,6 +1,6 @@
 import pytest
 import allure
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 from pages.login_page import LoginPage
 from pages.navigation_page import NavigationPage
 from pages.my_auctions_page import MyAuctionsPage
@@ -39,6 +39,8 @@ def login(sync_page, request):
         login_page.login_ad()
     else:
         raise ValueError(f"Unsupported user role: {user_role}")
+
+    expect(sync_page.get_by_role("button", name="Особистий кабінет")).to_be_visible(timeout=10000)
 
     # Ensure navigation to home after login
     navigation_page = NavigationPage(sync_page)

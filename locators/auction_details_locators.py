@@ -6,11 +6,7 @@ class AuctionDetailsLocators:
                            './/h6[contains(text(), "Ідентифікатор попереднього аукціону")]]'
                            '/div[contains(@class, "MuiGrid-grid-md-true")]//a')
 
-    PARTICIPATE_BTN = "Взяти участь"
-    PROFILE_SELECT = "Не визначено"
-    PRICE_FIELD = "Не визначено"
-    CONTINUE_BTN = "Продовжити"
-    PUBLISH_BTN = "Опублікувати"
+    PARTICIPATE_BUTTON = "Взяти участь"
 
 
 

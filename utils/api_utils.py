@@ -24,14 +24,20 @@ def api_login():
 
 def upload_document():
     """Uploads a document for a given auction via API and returns the document ID."""
-    token = api_login()
-    # Get the token by logging in
-    base_path = Path(__file__).resolve().parent.parent.parent  # Adjust based on your structure
-    document_path = base_path / "Emily_Playwright" / "utils" / "attachments" / "Test_PDF.pdf"
+    token = api_login()  # Obtain the token by logging in
+
+    # Calculate the repository root directory.
+    # Here we assume this file is located in something like <repo_root>/some_folder/this_file.py,
+    # so we use .parent.parent or adjust it as needed.
+    repo_root = Path(__file__).resolve().parent.parent  # Adjust based on your structure
+
+    # Build the path to the document which should always be in 'utils/attachments/Test_PDF.pdf'
+    document_path = repo_root / "utils" / "attachments" / "Test_PDF.pdf"
 
     if not document_path.exists():
-        raise FileNotFoundError(f"Test document missing at: {document_path}")  # Hardcoded document path
+        raise FileNotFoundError(f"Test document missing at: {document_path}")
 
+    # Construct the URL to upload the document
     url = (f"{ConfigParser.base_url}/api/v1.0/auctions/documents"
            f"/upload?documentType=TECHNICAL_SPECIFICATIONS&auctionType=BASIC_SELL_ENGLISH")
 
@@ -39,13 +45,12 @@ def upload_document():
         "Authorization": f"Bearer {token}",
     }
 
+    # Open and upload the file
     with open(document_path, 'rb') as file:
         files = {'file': file}
-
-        # Step 4: Send the POST request to upload the document
         response = requests.post(url, headers=headers, files=files)
 
-    # Step 5: Handle response and extract document ID
+    # Check the response
     if response.status_code == 200:
         json_data = response.json()
         document_id = json_data.get("id")
