@@ -17,7 +17,7 @@ def test_creation_draft_application(published_auction, allure_step, login):
     allure_step("Go to auction details", auction_details_page = all_auctions_page.goto_details())
 
     # Step 3 - Apply for participation
-    # allure_step("Initiate application process", lambda: auction_details_page.click_participate_button())
+    allure_step("Initiate application process", lambda: auction_details_page.click_participate_button())
     #
     # # Step 4 - Select profile and set price
     # allure_step("Set bid parameters", auction_details_page.select_profile("62"),

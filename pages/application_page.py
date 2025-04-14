@@ -1,7 +1,5 @@
 from playwright.sync_api import Page
-from locators.account_locators import AccountLocators
-from locators.all_auctions_locators import AllAuctionsLocators
-from locators.my_auctions_locators import MyAuctionsLocators
+from locators.application_locators import ApplicationLocators
 
 
 class ApplicationPage:
@@ -10,23 +8,21 @@ class ApplicationPage:
 
     def select_profile(self):
         # Replace with the locator for the status field in the card
-        self.page.get_by_label("Не визначено").get_by_text("Не визначено").click()
-        self.page.get_by_role("option", name="62").click()
+        self.page.get_by_label(ApplicationLocators.PROFILE_SELECT).get_by_text(ApplicationLocators.PROFILE_SELECT).click()
+        self.page.get_by_role("option", name=ApplicationLocators.APHRODITE_OPTION).click()
 
     def fill_price(self):
-        self.page.get_by_role("textbox", name="Не визначено").fill("1500")
+        self.page.get_by_role("textbox", name=ApplicationLocators.PRICE_FIELD).fill("1500")
 
     def continue_option(self):
-        self.page.get_by_role("button", name="Продовжити").click()
+        self.page.get_by_role("button", name=ApplicationLocators.CONTINUE_BUTTON).click()
 
     def confirmation_checks(self):
-        self.page.get_by_role("checkbox", name="Даю згоду на обробку персональних даних та "
-                                               "приймаю умови Політики конфіденційнос").check()
-        self.page.get_by_role("checkbox", name="Ознайомлений з Регламентом роботи "
-                                               "системи електронних торгів").check()
+        self.page.get_by_role("checkbox", name=ApplicationLocators.PERSONAL_DATA_CHECK).check()
+        self.page.get_by_role("checkbox", name=ApplicationLocators.FAMILIRIZATION_CHECK).check()
 
     def save_draft_application(self):
-        self.page.get_by_role("button", name="Зберегти чернетку").click()
+        self.page.get_by_role("button", name=ApplicationLocators.SAVE_DRAFT_BUTTON).click()
 
 
 
