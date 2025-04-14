@@ -26,9 +26,3 @@ class ApplicationPage:
 
 
 
-
-
-
-
-
-
