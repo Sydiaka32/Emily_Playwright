@@ -66,19 +66,16 @@ class AuctionPage:
         return coordinates_value
 
     def upload_document(self):
-        # Get the absolute path to the PlaywrightFramework directory
-        base_path = Path(__file__).resolve().parent.parent  # Move up two levels to PlaywrightFramework
-        file_path = base_path / "utils" / "attachments" / "Test_PDF.pdf"
+        # Get path relative to project root
+        base_path = Path(__file__).resolve().parent.parent.parent  # Adjust based on your structure
+        document_path = base_path / "Emily_Playwright" / "utils" / "attachments" / "Test_PDF.pdf"
+
+        if not document_path.exists():
+            raise FileNotFoundError(f"Test document missing at: {document_path}")
 
         # Use the file path with Playwright
-        file_input = self.page.query_selector(DocumentsBlock.DOCUMENT_UPLOAD)
-        file_input.set_input_files(str(file_path))
-
-    # def upload_document(self):
-    #     file_input = self.page.query_selector(DocumentsBlock.DOCUMENT_UPLOAD)
-    #     # Set the file to upload
-    #     file_input.set_input_files(r"C:\Users\User\Desktop\Automation\Selenium\Selenium\PlaywrightFramework\utils"
-    #                                r"\attachments\Test_PDF.pdf")
+        file_input = self.page.locator(DocumentsBlock.DOCUMENT_UPLOAD)
+        file_input.set_input_files(str(document_path))
 
     def publish(self):
         self.page.get_by_role("button", name=SubmitionBlock.PUBLISH).click()
@@ -103,9 +100,6 @@ class AuctionPage:
     def get_discount_value(self):
         discount_input = self.page.locator(DetailLotDescriptionBlock.DISCOUNT_INPUT_VALUE)
         return discount_input.input_value()
-
-    # def add_bank_account(self):
-    #     self.page.locator(BankAccounts.ADD_BANK_ACCOUNT).first.click()
 
     def add_registration_fee(self):
         self.page.get_by_label("", exact=True).nth(1).click()

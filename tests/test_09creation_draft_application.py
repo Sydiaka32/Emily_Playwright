@@ -10,11 +10,12 @@ def test_creation_draft_application(published_auction, allure_step, login):
     auction_details_page = None  # Will be initialized after navigation
 
     # Step 1 - Search for auction
-    allure_step("Search auction", all_auctions_page.search_auction(published_auction), take_screenshot=True)
-
+    allure_step("Search auction", lambda: all_auctions_page.search_auction(published_auction), take_screenshot=True)
 
     # Step 2 - Navigate to details (this handles popup)
-    allure_step("Go to auction details", auction_details_page = all_auctions_page.goto_details())
+    auction_details_page = allure_step("Go to auction details", lambda: all_auctions_page.goto_details())
+
+    page.wait_for_timeout(3000)
 
     # Step 3 - Apply for participation
     allure_step("Initiate application process", lambda: auction_details_page.click_participate_button())

@@ -1,6 +1,7 @@
 import requests
 from config.settings import ConfigParser
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 
 
@@ -23,10 +24,13 @@ def api_login():
 
 def upload_document():
     """Uploads a document for a given auction via API and returns the document ID."""
-
+    token = api_login()
     # Get the token by logging in
-    token = api_login()  # Call api_login to get the token
-    document_path = r"D:\Automation\Emily_Plawright\utils\attachments\Test_PDF.pdf"  # Hardcoded document path
+    base_path = Path(__file__).resolve().parent.parent.parent  # Adjust based on your structure
+    document_path = base_path / "Emily_Playwright" / "utils" / "attachments" / "Test_PDF.pdf"
+
+    if not document_path.exists():
+        raise FileNotFoundError(f"Test document missing at: {document_path}")  # Hardcoded document path
 
     url = (f"{ConfigParser.base_url}/api/v1.0/auctions/documents"
            f"/upload?documentType=TECHNICAL_SPECIFICATIONS&auctionType=BASIC_SELL_ENGLISH")
