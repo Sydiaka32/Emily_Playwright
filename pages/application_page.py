@@ -7,8 +7,10 @@ class ApplicationPage:
         self.page = page
 
     def select_profile(self):
-        self.page.wait_for_selector(ApplicationLocators.PROFILE_SELECT)
-        self.page.locator(ApplicationLocators.PROFILE_SELECT).click()
+        combobox = self.page.locator(ApplicationLocators.PROFILE_SELECT)
+        combobox.wait_for()
+        combobox.scroll_into_view_if_needed()
+        combobox.click()
         self.page.locator(ApplicationLocators.APHRODITE_OPTION).click()
 
     def fill_price(self):

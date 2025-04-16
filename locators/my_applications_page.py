@@ -1,5 +1,5 @@
 class MyApplicationLocators:
-    SEARCH_FIELD = '//*[@id=":rg:"]'
+    APPLICATION_CARD = "(//div[contains(@class, 'MuiPaper-elevation1')][1])[2]"
 
 
 
