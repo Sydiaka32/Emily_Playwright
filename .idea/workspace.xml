@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Updated test and locators to xpaths">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Implemented working steps for application creation test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locators/my_applications_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/my_applications_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/application_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/application_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locators/my_applications_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/my_applications_locators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my_applications_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my_applications_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_09creation_draft_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_09creation_draft_application.py" afterDir="false" />
     </list>
@@ -462,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744658455005</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Implemented working steps for application creation test">
+      <option name="closed" value="true" />
+      <created>1744831821403</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1744831821403</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -477,7 +484,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added allure steps to delete draft test" />
     <MESSAGE value="added allure steps to publish draft test" />
     <MESSAGE value="added allure steps to copy auction test" />
     <MESSAGE value="added allure steps to copy auction based test" />
@@ -502,6 +508,7 @@
     <MESSAGE value="Implemented navigation to auction details" />
     <MESSAGE value="Added locators for elements in application page" />
     <MESSAGE value="Updated test and locators to xpaths" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated test and locators to xpaths" />
+    <MESSAGE value="Implemented working steps for application creation test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented working steps for application creation test" />
   </component>
 </project>

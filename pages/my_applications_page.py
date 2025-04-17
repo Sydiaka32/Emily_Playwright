@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
 from locators.application_locators import ApplicationLocators
+from locators.my_applications_locators import MyApplicationLocators
 
 
 class MyApplicationPage:
@@ -23,20 +24,22 @@ class MyApplicationPage:
             "xpath=//h6[contains(@class, 'MuiTypography-subtitle1') and contains(text(), 'UA-EDR')]")
         return org_locator.text_content() == expected_org_name
 
-    def get_card_title(self):
+    def open_application_details(self):
+        print("Found:", self.page.locator(MyApplicationLocators.APPLICATION_DETAILS).count())
+        button = self.page.locator(MyApplicationLocators.APPLICATION_DETAILS).first
+        button.click()
+
+    def get_app_status(self):
         # Replace with the locator for the title field in the card
-        return self.page.locator(MyAuctionsLocators.CARD_TITLE).inner_text()
+        return self.page.locator(MyApplicationLocators.STATUS_INFO).inner_text()
 
-    def get_card_title_locator(self):
-        return self.page.locator(MyAuctionsLocators.CARD_TITLE)
+    def get_app_profile(self):
+        return self.page.locator(MyApplicationLocators.PROFILE_INFO).inner_text()
 
-    def get_card_procedure(self):
+    def get_app_price(self):
         # Replace with the locator for the procedure field in the card
-        return self.page.locator(MyAuctionsLocators.CARD_PROCEDURE).inner_text()
+        return self.page.locator(MyApplicationLocators.PRICE_INFO).inner_text()
 
-    def get_card_status(self):
-        # Replace with the locator for the status field in the card
-        return self.page.locator(MyAuctionsLocators.CARD_STATUS).inner_text()
 
 
 

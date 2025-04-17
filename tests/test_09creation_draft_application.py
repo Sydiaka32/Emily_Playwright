@@ -41,8 +41,24 @@ def test_creation_draft_application(published_auction, allure_step, login):
     # Step 6 - Submit application
     allure_step("Submit draft application", lambda: application_page.save_draft_application(), take_screenshot=False)
 
+    page.wait_for_timeout(5000)
+    current_page = application_page.page
+    print("Redirected to URL:", current_page.url)
+
+    my_applications_page = MyApplicationPage(current_page)
+
+    allure_step("Open application details", lambda: my_applications_page.open_application_details(), take_screenshot=False)
+
+
     # Step 7 - Assert values directly
-    assert my_applications_page.verify_application_status("Неопублікована заява"), "Application status not correct"
-    assert my_applications_page.verify_draft_price("1700 грн"), "Draft price is incorrect"
-    assert my_applications_page.verify_organization_name("SdU, UA-EDR"), "Organization name is incorrect"
+    assert my_applications_page.get_app_status() == "Неопублікована заява", \
+        f"Expected status to be 'Неопублікована заява', but got '{my_applications_page.get_app_status()}'"
+
+    assert "500" in my_applications_page.get_app_price(), \
+        f"Price should contain '500', got '{my_applications_page.get_app_price()}'"
+
+    assert my_applications_page.get_app_profile() == "62 | Юридична особа - резидент | Aphrodite", \
+        (f"Expected profile to be '62 | Юридична особа - резидент | Aphrodite', "
+         f"but got '{my_applications_page.get_app_profile()}'")
+
 
