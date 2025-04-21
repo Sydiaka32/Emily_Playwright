@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 
-def api_login():
+def api_login_organiser():
     """Logs in and returns the access token."""
     url = f"{ConfigParser.base_url}/auth/api/v1.0/users/login"
     payload = {
@@ -21,10 +21,26 @@ def api_login():
     else:
         raise Exception(f"Login failed: {response.status_code}, {response.text}")
 
+def api_login_participant():
+    """Logs in and returns the access token."""
+    url = f"{ConfigParser.base_url}/auth/api/v1.0/users/login"
+    payload = {
+        "email": ConfigParser.email_t3,
+        "password": ConfigParser.password_user
+    }
+
+    response = requests.post(url, json=payload)
+
+    if response.status_code == 200:
+        json_data = response.json()
+        return json_data.get("accessToken")  # Return the token
+    else:
+        raise Exception(f"Login failed: {response.status_code}, {response.text}")
+
 
 def upload_document():
     """Uploads a document for a given auction via API and returns the document ID."""
-    token = api_login()  # Obtain the token by logging in
+    token = api_login_organiser()  # Obtain the token by logging in
 
     # Calculate the repository root directory.
     # Here we assume this file is located in something like <repo_root>/some_folder/this_file.py,
@@ -72,7 +88,7 @@ def generate_fast_manual_time():
 def create_auction():
     """Creates an auction with the given document ID."""
     # Step 1: Get the token by logging in
-    token = api_login()  # Use the api_login function to get the token
+    token = api_login_organiser()  # Use the api_login function to get the token
     document_id = upload_document()
 
     # Step 2: Prepare auction data
@@ -171,7 +187,7 @@ def create_auction():
 def publish_auction():
     """Publishes the auction with the given draft ID."""
     # Step 1: Get the token by logging in
-    token = api_login()  # Use the api_login function to get the token
+    token = api_login_organiser()  # Use the api_login function to get the token
     draft_id = create_auction()
 
     # Step 2: Prepare the URL and headers

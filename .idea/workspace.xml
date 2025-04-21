@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Implemented working steps for application creation test">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Changed approach for assertions. Made full working test creation application in draft">
+      <change afterPath="$PROJECT_DIR$/tests/test_10publish_application.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locators/my_applications_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/my_applications_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my_applications_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my_applications_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_09creation_draft_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_09creation_draft_application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/api_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,14 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737815185447</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Init as new project">
-      <option name="closed" value="true" />
-      <created>1737816873155</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1737816873155</updated>
     </task>
     <task id="LOCAL-00002" summary="Adding fixtures for browser start, login and navigation to the my-acutions page">
       <option name="closed" value="true" />
@@ -469,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744831821403</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Changed approach for assertions. Made full working test creation application in draft">
+      <option name="closed" value="true" />
+      <created>1744918647324</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1744918647325</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -484,7 +484,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added allure steps to publish draft test" />
     <MESSAGE value="added allure steps to copy auction test" />
     <MESSAGE value="added allure steps to copy auction based test" />
     <MESSAGE value="Added lambda to make functions callable in tests via allure" />
@@ -509,6 +508,7 @@
     <MESSAGE value="Added locators for elements in application page" />
     <MESSAGE value="Updated test and locators to xpaths" />
     <MESSAGE value="Implemented working steps for application creation test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented working steps for application creation test" />
+    <MESSAGE value="Changed approach for assertions. Made full working test creation application in draft" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed approach for assertions. Made full working test creation application in draft" />
   </component>
 </project>

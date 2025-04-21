@@ -5,7 +5,7 @@ from pages.login_page import LoginPage
 from pages.navigation_page import NavigationPage
 from pages.my_auctions_page import MyAuctionsPage
 from pages.auction_page import AuctionPage
-from utils.api_utils import api_login, upload_document, create_auction, publish_auction
+from utils.api_utils import api_login_organiser, upload_document, create_auction, publish_auction
 
 
 
