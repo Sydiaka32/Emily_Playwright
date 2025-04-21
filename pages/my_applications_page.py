@@ -40,6 +40,28 @@ class MyApplicationPage:
         # Replace with the locator for the procedure field in the card
         return self.page.locator(MyApplicationLocators.PRICE_INFO).inner_text()
 
+    def get_application_card(self, bid_id: str):
+        """Locates the application card by bid ID using proper CSS escaping"""
+        return self.page.locator(
+            f'div.MuiPaper-root:has(span:has-text("{bid_id}"))'
+        ).filter(has_text="ID:")
+
+    def get_publish_button(self, bid_id: str):
+        """Locates the publish button within a specific application card"""
+        card = self.get_application_card(bid_id)
+        return card.get_by_role("button", name="Опублікувати", exact=True)
+
+    def publish_application(self, bid_id: str):
+        """Full flow to publish a specific application"""
+
+        publish_btn = self.get_publish_button(bid_id)
+        publish_btn.click()
+
+    def get_application_status(self, bid_id: str):
+        """Gets the status element using stable selectors"""
+        card = self.get_application_card(bid_id)
+        # Use the SVG icon as an anchor point
+        return card.locator('svg[data-testid="FiberManualRecordIcon"] + h6').first  # or use :nth-match()
 
 
 

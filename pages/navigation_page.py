@@ -32,7 +32,9 @@ class NavigationPage:
         self.page.goto(home_url)
         self.page.wait_for_load_state("domcontentloaded")
 
-
+    def navigate_to_my_applications(self):
+        self.page.locator(AccountLocators.PERSONAL_ACCOUNT_BUTTON).click()
+        self.page.locator(AccountLocators.MY_APPLICATIONS_TAB).click()
 
 
 

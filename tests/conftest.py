@@ -5,8 +5,7 @@ from pages.login_page import LoginPage
 from pages.navigation_page import NavigationPage
 from pages.my_auctions_page import MyAuctionsPage
 from pages.auction_page import AuctionPage
-from utils.api_utils import api_login_organiser, upload_document, create_auction, publish_auction
-
+from utils.api_utils import api_login_organiser, upload_document, create_auction, publish_auction, create_bid
 
 
 @pytest.fixture(scope="function")
@@ -171,3 +170,15 @@ def published_auction():
 
     # Return the prozorroId for use in test cases
     yield prozorro_id
+
+
+@pytest.fixture(scope="function")
+def draft_application(published_auction):
+    """
+    Creates a draft application (bid) for a published auction.
+    Depends on published_auction fixture.
+    """
+    auction_id = published_auction  # published_auction now returns auction_id
+    bid_id = create_bid(auction_id)
+    return bid_id
+

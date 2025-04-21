@@ -205,3 +205,40 @@ def publish_auction():
         return response.json()  # You can return the response if needed
     else:
         raise Exception(f"Failed to publish auction {draft_id}: {response.status_code}, {response.text}")
+
+def create_bid(auction_id, user_profile_id=62, initial_amount=1500):
+    """
+    Creates a bid (draft application) for a given auction via API.
+
+    Args:
+        auction_id (str): ID of the auction for which the bid is being created.
+        user_profile_id (int): User profile ID of the bidder.
+        initial_amount (float): Initial amount offered in the bid.
+
+    Returns:
+        str: ID of the created bid.
+    """
+    token = api_login_participant()  # Make sure this logs in a bidder
+
+    url = f"{ConfigParser.base_url}/api/v1.0/bids"
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    payload = {
+        "auctionId": auction_id,
+        "userProfileId": user_profile_id,
+        "initialAmount": initial_amount
+    }
+
+    response = requests.post(url, json=payload, headers=headers)
+
+    if response.status_code == 200:
+        bid_id = response.json().get("id")
+        print(f"Bid created successfully. Bid ID: {bid_id}")
+        return bid_id
+    else:
+        raise Exception(f"Failed to create bid: {response.status_code}, {response.text}")
+
