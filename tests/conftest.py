@@ -8,7 +8,8 @@ from pages.admin.login_page import LoginPageAdmin
 from pages.navigation_page import NavigationPage
 from pages.my_auctions_page import MyAuctionsPage
 from pages.auction_page import AuctionPage
-from utils.api_utils import api_login_organiser, upload_document, create_auction, publish_auction, create_bid
+from utils.api_utils import (api_login_organiser, upload_document, create_auction, publish_auction, create_bid,
+                             publish_bid)
 
 
 @pytest.fixture(scope="function")
@@ -189,3 +190,11 @@ def draft_application(published_auction):
     bid_id = create_bid(auction_id)
     return bid_id
 
+@pytest.fixture(scope="function")
+def published_application(draft_application):
+    """
+    Publishes a draft application (bid) as a test setup step.
+    Depends on draft_application fixture.
+    """
+    bid_id = draft_application
+    publish_bid(bid_id)

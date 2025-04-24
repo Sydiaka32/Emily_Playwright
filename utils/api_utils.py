@@ -242,3 +242,30 @@ def create_bid(auction_id, user_profile_id=62, initial_amount=1500):
     else:
         raise Exception(f"Failed to create bid: {response.status_code}, {response.text}")
 
+def publish_bid(bid_id):
+    """
+    Publishes a bid (application) using the PATCH method.
+
+    Args:
+        bid_id (str): ID of the bid to be published.
+
+    Returns:
+        dict: JSON response from the server.
+    """
+    token = api_login_participant()  # Same as for create_bid
+
+    url = f"{ConfigParser.base_url}/api/v1.0/bids/{bid_id}/publish"
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    response = requests.patch(url, headers=headers)
+
+    if response.status_code == 200:
+        print(f"Bid published successfully. Bid ID: {bid_id}")
+        return response.json()
+    else:
+        raise Exception(f"Failed to publish bid: {response.status_code}, {response.text}")
+

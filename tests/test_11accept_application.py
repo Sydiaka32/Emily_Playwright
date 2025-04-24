@@ -6,7 +6,7 @@ from pages.navigation_page import NavigationPage
 
 
 @pytest.mark.parametrize('login', ['admin'], indirect=True)
-def test_accept_application(published_auction, draft_application, allure_step, login):
+def test_accept_application(published_auction, draft_application, published_application, allure_step, login):
     page = login
     all_auctions_page = AllAuctionsPage(page)
     my_applications_page = MyApplicationPage(page)
