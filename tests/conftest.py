@@ -43,7 +43,10 @@ def login(sync_page, request):
     else:
         raise ValueError(f"Unsupported user role: {user_role}")
 
-    expect(sync_page.get_by_role("button", name="Особистий кабінет")).to_be_visible(timeout=10000)
+    if user_role == "admin":
+        expect(sync_page.locator("[data-testid='PermIdentityOutlinedIcon']")).to_be_visible(timeout=10000)
+    else:
+        expect(sync_page.get_by_role("button", name="Особистий кабінет")).to_be_visible(timeout=10000)
 
     # Ensure navigation to home after login
     navigation_page = NavigationPage(sync_page)
