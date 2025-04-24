@@ -14,8 +14,10 @@ def test_accept_application(published_auction, draft_application, published_appl
     navigation = NavigationPage(page)
 
     # Pre-Conditions: create auction -> create application for it -> publish application
+    # Implemented with fixtures
 
     # Step 1: Login to admin as admin
+    # Implemented with fixtures
 
     # Step 2: Go to applications
 
