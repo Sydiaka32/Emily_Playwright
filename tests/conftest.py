@@ -1,7 +1,10 @@
 import pytest
 import allure
 from playwright.sync_api import sync_playwright, expect
+
+from pages.admin.login_page import LoginPageAdmin
 from pages.login_page import LoginPage
+from pages.admin.login_page import LoginPageAdmin
 from pages.navigation_page import NavigationPage
 from pages.my_auctions_page import MyAuctionsPage
 from pages.auction_page import AuctionPage
@@ -23,6 +26,7 @@ def sync_page():
 def login(sync_page, request):
     """Login fixture that supports multiple user roles."""
     login_page = LoginPage(sync_page)
+    login_page_admin = LoginPageAdmin(sync_page)
 
     # Take user role from the parametrize decorator (default to t1)
     user_role = request.param if hasattr(request, "param") else "t1"
@@ -35,7 +39,7 @@ def login(sync_page, request):
     elif user_role == "mv":
         login_page.login_mv()
     elif user_role == "admin":
-        login_page.login_ad()
+        login_page_admin.login_ad()
     else:
         raise ValueError(f"Unsupported user role: {user_role}")
 
