@@ -1,6 +1,5 @@
-import re
-from playwright.sync_api import Page, expect
-from locators.auction_details_locators import AuctionDetailsLocators
+from playwright.sync_api import Page
+from locators.user.auction_details_locators import AuctionDetailsLocators
 
 
 class AuctionDetailsPage:

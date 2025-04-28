@@ -1,6 +1,5 @@
 from playwright.sync_api import Page
-from locators.application_locators import ApplicationLocators
-from locators.my_applications_locators import MyApplicationLocators
+from locators.user.my_applications_locators import MyApplicationLocators
 
 
 class MyApplicationPage:

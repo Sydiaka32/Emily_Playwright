@@ -1,10 +1,8 @@
 import re
 from playwright.sync_api import Page, expect
-from locators.auction_locators import (OrganiserBlock, BasicInfoBlock, DetailLotDescriptionBlock,
-                                                           LotInfoBlock, DocumentsBlock, SubmitionBlock, BankAccounts)
+from locators.user.auction_locators import (OrganiserBlock, BasicInfoBlock, DetailLotDescriptionBlock,
+                                            LotInfoBlock, DocumentsBlock, SubmitionBlock, BankAccounts)
 from pathlib import Path
-from pages.my_auctions_page import MyAuctionsPage
-
 
 
 class AuctionPage:

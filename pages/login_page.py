@@ -1,6 +1,6 @@
 from playwright.sync_api import Page
 from config.settings import ConfigParser
-from locators.login_locations import LoginLocators
+from locators.user.login_locations import LoginLocators
 
 
 class LoginPage:

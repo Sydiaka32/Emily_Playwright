@@ -3,7 +3,7 @@ import pytest
 from pages.navigation_page import NavigationPage
 from pages.my_auctions_page import MyAuctionsPage
 from pages.auction_page import AuctionPage
-from locators.auction_locators import BankAccounts
+from locators.user.auction_locators import BankAccounts
 
 @pytest.mark.parametrize('login', ['t1'], indirect=True)
 def test_bank_accounts(navigate_to_my_auctions, allure_step, login):

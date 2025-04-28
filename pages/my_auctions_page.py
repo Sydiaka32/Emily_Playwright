@@ -1,6 +1,6 @@
 from playwright.sync_api import Page
-from locators.account_locators import AccountLocators
-from locators.my_auctions_locators import MyAuctionsLocators
+from locators.user.account_locators import AccountLocators
+from locators.user.my_auctions_locators import MyAuctionsLocators
 
 
 class MyAuctionsPage:

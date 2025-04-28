@@ -1,6 +1,4 @@
 from playwright.sync_api import Page
-from locators.account_locators import AccountLocators
-from config.settings import ConfigParser
 from locators.admin.navigation_locators import NavigationLocatorsAdmin
 
 
