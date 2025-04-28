@@ -23,6 +23,8 @@ def sync_page():
         browser.close()
 
 
+
+
 @pytest.fixture
 def login(sync_page, request):
     """Login fixture that supports multiple user roles."""
@@ -46,12 +48,14 @@ def login(sync_page, request):
 
     if user_role == "admin":
         expect(sync_page.locator("[data-testid='PermIdentityOutlinedIcon']")).to_be_visible(timeout=10000)
+
     else:
         expect(sync_page.get_by_role("button", name="Особистий кабінет")).to_be_visible(timeout=10000)
+        # Ensure navigation to home after login
+        navigation_page = NavigationPage(sync_page)
+        navigation_page.navigate_to_home()  # Navigate to auctions page after login
 
-    # Ensure navigation to home after login
-    navigation_page = NavigationPage(sync_page)
-    navigation_page.navigate_to_home()  # Navigate to auctions page after login
+
 
     return sync_page
 

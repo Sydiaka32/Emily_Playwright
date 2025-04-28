@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Adding login as participant via api. Renaming function for login as organiser">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added skeleton for a test">
+      <change afterPath="$PROJECT_DIR$/locators/admin/application_details_locators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locators/admin/applications_locators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locators/admin/navigation_locators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/application_details_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/applications_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/navigation_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locators/account_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/account_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my_applications_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my_applications_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/navigation_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/navigation_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_10publish_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_10publish_application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/api_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_11accept_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_11accept_application.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +57,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Automation/Emily_Plawright/.venv/Scripts/python.exe&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/Emily_ISO&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -79,54 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737815185447</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Updating locators for notification popup and measure unit dropdown">
-      <option name="closed" value="true" />
-      <created>1738098280573</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1738098280573</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Updating locators for auction card and related locators">
-      <option name="closed" value="true" />
-      <created>1738613455234</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1738613455234</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Updated edit actions with waiting">
-      <option name="closed" value="true" />
-      <created>1738614845140</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1738614845140</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Removed exatra handling of popup">
-      <option name="closed" value="true" />
-      <created>1738615133903</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1738615133903</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Removed extra steps for reaching my auction page">
-      <option name="closed" value="true" />
-      <created>1738615794613</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1738615794613</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Updated test for deletion using new approach by extracting id from url">
-      <option name="closed" value="true" />
-      <created>1738872664940</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1738872664940</updated>
     </task>
     <task id="LOCAL-00009" summary="Updated test for publication draft">
       <option name="closed" value="true" />
@@ -472,7 +426,55 @@
       <option name="project" value="LOCAL" />
       <updated>1745256643107</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Implemented publication of application test">
+      <option name="closed" value="true" />
+      <created>1745263926810</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1745263926810</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Created directories for admin functionality">
+      <option name="closed" value="true" />
+      <created>1745519274631</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1745519274631</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Updating logic for parametrized login as admin">
+      <option name="closed" value="true" />
+      <created>1745519766026</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1745519766026</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Adding condition for expect element after login for admin">
+      <option name="closed" value="true" />
+      <created>1745520232484</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1745520232484</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Added fixture for publishing application">
+      <option name="closed" value="true" />
+      <created>1745520798674</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1745520798674</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Added skeleton for a test">
+      <option name="closed" value="true" />
+      <created>1745520903509</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1745520903509</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -487,12 +489,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added allure steps to copy auction based test" />
-    <MESSAGE value="Added lambda to make functions callable in tests via allure" />
-    <MESSAGE value="Implemented test copy based" />
-    <MESSAGE value="Fixed unexpected renaming of procedure" />
-    <MESSAGE value="Implemented adding all types of bank accounts in UAH currency" />
-    <MESSAGE value="Implemented adding all types of bank accounts in all currencies" />
     <MESSAGE value="Refactored bank accounts test to prevent a lot of duplicated code" />
     <MESSAGE value="Added requirements.txt file" />
     <MESSAGE value="Removed creation draft into fixture" />
@@ -512,6 +508,12 @@
     <MESSAGE value="Implemented working steps for application creation test" />
     <MESSAGE value="Changed approach for assertions. Made full working test creation application in draft" />
     <MESSAGE value="Adding login as participant via api. Renaming function for login as organiser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding login as participant via api. Renaming function for login as organiser" />
+    <MESSAGE value="Implemented publication of application test" />
+    <MESSAGE value="Created directories for admin functionality" />
+    <MESSAGE value="Updating logic for parametrized login as admin" />
+    <MESSAGE value="Adding condition for expect element after login for admin" />
+    <MESSAGE value="Added fixture for publishing application" />
+    <MESSAGE value="Added skeleton for a test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added skeleton for a test" />
   </component>
 </project>
