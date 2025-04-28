@@ -1,9 +1,8 @@
 import pytest
 from playwright.sync_api import sync_playwright
-from pages.login_page import LoginPage
-from pages.navigation_page import NavigationPage
-from pages.my_auctions_page import MyAuctionsPage
-from pages.auction_page import AuctionPage
+from pages.user.login_page import LoginPage
+from pages.user.navigation_page import NavigationPage
+
 
 @pytest.fixture(scope="function")
 def browser():

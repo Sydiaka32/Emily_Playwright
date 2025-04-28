@@ -1,8 +1,8 @@
 import pytest
 
-from pages.navigation_page import NavigationPage
-from pages.my_auctions_page import MyAuctionsPage
-from pages.auction_page import AuctionPage
+from pages.user.navigation_page import NavigationPage
+from pages.user.my_auctions_page import MyAuctionsPage
+from pages.user.auction_page import AuctionPage
 from locators.user.auction_locators import BankAccounts
 
 @pytest.mark.parametrize('login', ['t1'], indirect=True)

@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
 from locators.user.account_locators import AccountLocators
 from locators.user.all_auctions_locators import AllAuctionsLocators
-from pages.auction_details_page import AuctionDetailsPage  # Create this if needed
+from pages.user.auction_details_page import AuctionDetailsPage  # Create this if needed
 
 
 class AllAuctionsPage:

@@ -2,13 +2,12 @@ import pytest
 import allure
 from playwright.sync_api import sync_playwright, expect
 
+from pages.user.login_page import LoginPage
 from pages.admin.login_page import LoginPageAdmin
-from pages.login_page import LoginPage
-from pages.admin.login_page import LoginPageAdmin
-from pages.navigation_page import NavigationPage
-from pages.my_auctions_page import MyAuctionsPage
-from pages.auction_page import AuctionPage
-from utils.api_utils import (api_login_organiser, upload_document, create_auction, publish_auction, create_bid,
+from pages.user.navigation_page import NavigationPage
+from pages.user.my_auctions_page import MyAuctionsPage
+from pages.user.auction_page import AuctionPage
+from utils.api_utils import (upload_document, create_auction, publish_auction, create_bid,
                              publish_bid)
 
 

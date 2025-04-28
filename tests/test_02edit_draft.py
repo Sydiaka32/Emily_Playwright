@@ -1,7 +1,7 @@
 import pytest
 
-from pages.my_auctions_page import MyAuctionsPage
-from pages.auction_page import AuctionPage
+from pages.user.my_auctions_page import MyAuctionsPage
+from pages.user.auction_page import AuctionPage
 
 
 @pytest.mark.parametrize('login', ['t1'], indirect=True)

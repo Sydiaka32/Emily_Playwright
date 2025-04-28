@@ -1,8 +1,8 @@
 import pytest
-from pages.my_applications_page import MyApplicationPage
-from pages.all_auctions_page import AllAuctionsPage
-from pages.application_page import ApplicationPage
-from pages.navigation_page import NavigationPage
+from pages.user.my_applications_page import MyApplicationPage
+from pages.user.all_auctions_page import AllAuctionsPage
+from pages.user.application_page import ApplicationPage
+from pages.user.navigation_page import NavigationPage
 
 
 @pytest.mark.parametrize('login', ['t3'], indirect=True)
