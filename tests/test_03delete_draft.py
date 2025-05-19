@@ -17,6 +17,9 @@ def test_delete_draft(created_auction, allure_step, login):
     # Step 1: Navigate to my auctions
     allure_step("Navigate to my auctions", lambda: navigation.navigate_to_my_auctions(), take_screenshot=False)
 
+    # Step 2: Switch tab to drafts
+    allure_step("Switch tab to drafts", lambda: my_auctions_page.switch_to_drafts(), take_screenshot=False)
+
     # Step 2: Delete draft
     allure_step("Delete draft", lambda: my_auctions_page.delete_option(), take_screenshot=False)
 
