@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added known improvements">
-      <change beforePath="$PROJECT_DIR$/tests/test_03delete_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_03delete_draft.py" afterDir="false" />
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added switch to drafts for more accuracy">
+      <change beforePath="$PROJECT_DIR$/tests/test_04publish_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_04publish_draft.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,22 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737815185447</updated>
-    </task>
-    <task id="LOCAL-00015" summary="changed comments for steps">
-      <option name="closed" value="true" />
-      <created>1739621680444</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1739621680445</updated>
-    </task>
-    <task id="LOCAL-00016" summary="refactored code with extracting auction id by using added previously fixture">
-      <option name="closed" value="true" />
-      <created>1739621805046</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1739621805046</updated>
     </task>
     <task id="LOCAL-00017" summary="created copy creation based on existing auction">
       <option name="closed" value="true" />
@@ -468,7 +452,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747679975876</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Updated test 3 with api fixture">
+      <option name="closed" value="true" />
+      <created>1747680379758</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1747680379758</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Added switch to drafts for more accuracy">
+      <option name="closed" value="true" />
+      <created>1747680636772</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1747680636772</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,8 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented is perishable test" />
-    <MESSAGE value="Tried to figure out why its works this way but not immediately after publish" />
     <MESSAGE value="Refactorred login fixture for more flexible usage. Parametrized tests" />
     <MESSAGE value="Added login fixture to each test" />
     <MESSAGE value="Implemented api_utils for creating and publishing auction" />
@@ -508,6 +506,8 @@
     <MESSAGE value="Added pre-condtion for test 2" />
     <MESSAGE value="spaces" />
     <MESSAGE value="Added known improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added known improvements" />
+    <MESSAGE value="Updated test 3 with api fixture" />
+    <MESSAGE value="Added switch to drafts for more accuracy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added switch to drafts for more accuracy" />
   </component>
 </project>
