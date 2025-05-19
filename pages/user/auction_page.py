@@ -66,7 +66,7 @@ class AuctionPage:
     def upload_document(self):
         # Get path relative to project root
         base_path = Path(__file__).resolve().parent.parent.parent  # Adjust based on your structure
-        document_path = base_path / "Emily_Playwright" / "utils" / "attachments" / "Test_PDF.pdf"
+        document_path = base_path / "utils" / "attachments" / "Test_PDF.pdf"
 
         if not document_path.exists():
             raise FileNotFoundError(f"Test document missing at: {document_path}")

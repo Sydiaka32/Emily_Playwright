@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added switch to drafts for more accuracy">
-      <change beforePath="$PROJECT_DIR$/tests/test_04publish_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_04publish_draft.py" afterDir="false" />
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Updated test 4 with pre-condition + removed extra notification closing">
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737815185447</updated>
-    </task>
-    <task id="LOCAL-00017" summary="created copy creation based on existing auction">
-      <option name="closed" value="true" />
-      <created>1739626847510</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1739626847510</updated>
     </task>
     <task id="LOCAL-00018" summary="trying allure reporting">
       <option name="closed" value="true" />
@@ -468,7 +460,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747680636772</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Updated test 4 with pre-condition + removed extra notification closing">
+      <option name="closed" value="true" />
+      <created>1747681190399</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1747681190399</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,7 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactorred login fixture for more flexible usage. Parametrized tests" />
     <MESSAGE value="Added login fixture to each test" />
     <MESSAGE value="Implemented api_utils for creating and publishing auction" />
     <MESSAGE value="Implemented and tested fixture for creating auction before tests via api" />
@@ -508,6 +507,7 @@
     <MESSAGE value="Added known improvements" />
     <MESSAGE value="Updated test 3 with api fixture" />
     <MESSAGE value="Added switch to drafts for more accuracy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added switch to drafts for more accuracy" />
+    <MESSAGE value="Updated test 4 with pre-condition + removed extra notification closing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated test 4 with pre-condition + removed extra notification closing" />
   </component>
 </project>
