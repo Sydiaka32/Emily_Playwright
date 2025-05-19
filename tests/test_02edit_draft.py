@@ -23,6 +23,7 @@ def test_edit_draft(created_auction, allure_step, login):
 
     # Step 4: Edit title
     allure_step("Edit title", lambda: auction_page.edit_title(), take_screenshot=True)
+
     page.wait_for_timeout(1000)
 
     # Step 5: Save changes
