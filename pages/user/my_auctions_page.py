@@ -72,7 +72,13 @@ class MyAuctionsPage:
     def goto_auction_details(self):
         self.page.get_by_role("link", name=MyAuctionsLocators.DETAILS_BUTTON).first.click()
 
+    def switch_to_drafts(self):
+        self.page.locator(MyAuctionsLocators.DRAFTS_TAB).click()
 
+    def search_auction(self, auction_id):
+        # self.page.locator(AllAuctionsLocators.SEARCH_FIELD).fill(prozorro_id)
+        self.page.locator(MyAuctionsLocators.SEARCH_FIELD).fill(str(auction_id))
+        self.page.get_by_role("button", name=MyAuctionsLocators.SEARCH_BUTTON).first.click()
 
 
 

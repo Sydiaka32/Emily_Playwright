@@ -156,6 +156,11 @@ def create_draft_auction(navigate_to_my_auctions, allure_step):
         "status": my_auctions_page.get_card_status()
     }
 
+@pytest.fixture(scope="function")
+def created_auction():
+    """Fixture that creates an auction and returns the auction_id."""
+    auction_id = create_auction()
+    yield auction_id
 
 @pytest.fixture(scope="function")
 def published_auction():

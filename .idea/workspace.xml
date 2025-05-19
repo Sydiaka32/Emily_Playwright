@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added skeleton for a test">
-      <change afterPath="$PROJECT_DIR$/locators/admin/application_details_locators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locators/admin/applications_locators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locators/admin/navigation_locators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/application_details_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/applications_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/navigation_page.py" afterDir="false" />
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="moving page files to user folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locators/user/my_auctions_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/user/my_auctions_locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/user/my_auctions_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/my_auctions_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_11accept_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_11accept_application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_02edit_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_02edit_draft.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +59,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Automation\Emily_Plawright\pages\user" />
+      <recent name="D:\Automation\Emily_Plawright\locators\user" />
       <recent name="D:\Automation\Emily_Plawright" />
     </key>
   </component>
@@ -81,30 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737815185447</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Updated test for publication draft">
-      <option name="closed" value="true" />
-      <created>1738874787572</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1738874787572</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Added test for creating copy of auction">
-      <option name="closed" value="true" />
-      <created>1739219733037</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1739219733037</updated>
-    </task>
-    <task id="LOCAL-00011" summary="renaming test">
-      <option name="closed" value="true" />
-      <created>1739219796653</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1739219796653</updated>
     </task>
     <task id="LOCAL-00012" summary="retrieving duplicated code into the fixture">
       <option name="closed" value="true" />
@@ -474,7 +448,31 @@
       <option name="project" value="LOCAL" />
       <updated>1745520903509</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Implemented approving of a bid by admin">
+      <option name="closed" value="true" />
+      <created>1745866042706</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1745866042706</updated>
+    </task>
+    <task id="LOCAL-00059" summary="moving locator files to user folder">
+      <option name="closed" value="true" />
+      <created>1745866177681</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1745866177681</updated>
+    </task>
+    <task id="LOCAL-00060" summary="moving page files to user folder">
+      <option name="closed" value="true" />
+      <created>1745866237992</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1745866237992</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -489,9 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored bank accounts test to prevent a lot of duplicated code" />
-    <MESSAGE value="Added requirements.txt file" />
-    <MESSAGE value="Removed creation draft into fixture" />
     <MESSAGE value="Added methods for custom waitings" />
     <MESSAGE value="Refactored test creation draft with fixture" />
     <MESSAGE value="Tried to refactor test using fixture" />
@@ -514,6 +509,9 @@
     <MESSAGE value="Adding condition for expect element after login for admin" />
     <MESSAGE value="Added fixture for publishing application" />
     <MESSAGE value="Added skeleton for a test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added skeleton for a test" />
+    <MESSAGE value="Implemented approving of a bid by admin" />
+    <MESSAGE value="moving locator files to user folder" />
+    <MESSAGE value="moving page files to user folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="moving page files to user folder" />
   </component>
 </project>

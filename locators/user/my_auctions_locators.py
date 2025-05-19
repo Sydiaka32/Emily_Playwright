@@ -21,6 +21,10 @@ class MyAuctionsLocators:
     ORDER_NUMBER_FIELD = "Черговість лоту"
     SUBMIT_POPUP = "ТАК"
 
+    DRAFTS_TAB = "a[role='tab'][href='/my-auctions/drafts']"
+    SEARCH_FIELD = "input[name='keyword']"
+    SEARCH_BUTTON = "Пошук"
+
 
 
 
