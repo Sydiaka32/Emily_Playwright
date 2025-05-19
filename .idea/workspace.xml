@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="moving page files to user folder">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locators/user/my_auctions_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/user/my_auctions_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/my_auctions_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/my_auctions_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_02edit_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_02edit_draft.py" afterDir="false" />
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="spaces">
+      <change afterPath="$PROJECT_DIR$/known_improvements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,22 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737815185447</updated>
-    </task>
-    <task id="LOCAL-00012" summary="retrieving duplicated code into the fixture">
-      <option name="closed" value="true" />
-      <created>1739221607626</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1739221607626</updated>
-    </task>
-    <task id="LOCAL-00013" summary="updated logic for copy creation to prevent fails due to draft auctions">
-      <option name="closed" value="true" />
-      <created>1739474168706</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1739474168706</updated>
     </task>
     <task id="LOCAL-00014" summary="trying to implement logic with continuous checking for notifications">
       <option name="closed" value="true" />
@@ -472,7 +452,23 @@
       <option name="project" value="LOCAL" />
       <updated>1745866237992</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Added pre-condtion for test 2">
+      <option name="closed" value="true" />
+      <created>1747679811984</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1747679811984</updated>
+    </task>
+    <task id="LOCAL-00062" summary="spaces">
+      <option name="closed" value="true" />
+      <created>1747679888398</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1747679888398</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -487,8 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added methods for custom waitings" />
-    <MESSAGE value="Refactored test creation draft with fixture" />
     <MESSAGE value="Tried to refactor test using fixture" />
     <MESSAGE value="Implemented is perishable test" />
     <MESSAGE value="Tried to figure out why its works this way but not immediately after publish" />
@@ -512,6 +506,8 @@
     <MESSAGE value="Implemented approving of a bid by admin" />
     <MESSAGE value="moving locator files to user folder" />
     <MESSAGE value="moving page files to user folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="moving page files to user folder" />
+    <MESSAGE value="Added pre-condtion for test 2" />
+    <MESSAGE value="spaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="spaces" />
   </component>
 </project>

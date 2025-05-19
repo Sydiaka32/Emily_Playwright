@@ -1,0 +1,17 @@
+1. test_2 - add api_creation_auction as precondition
+2. test_2 - add more edited entities for assertion/expect
+3. test_1 - add more checked entities for assertion/expect
+4. test_3 - add api_creation_auction as precondition
+5. test_4 - add api_creation_auction as precondition
+6. test_5 - add api_publish_auction as precondition
+7. test_5 - check more entities in assertions/expect
+8. test_6 - add api_publish_auction as precondition
+9. test_7 - add assertions/expect
+10. test_9 - change  hardcoded values in asserts to dynamic
+11. make statuses of auction/application variables, instead of using them hardcoded in assertions
+12. pages.user.application_page.py - change fill_price function to fill random price instead of hardcoded
+13. pages.user.auction_details_page.py - take out locators from get_discount_value() function
+14. pages.user.auction_page.py - fill_basic_info_block(self),  fill_detail_lot_description_block(self),
+fill_lot_info_block(self), edit_title, enable_discount(self) - apply dynamic values for filling instead of hardcoded
+15. pages.user.my_applications_page.py - verify_application_status, verify_draft_price, verify_organization_name,
+get_application_card, get_application_status - take out locators to locators file
