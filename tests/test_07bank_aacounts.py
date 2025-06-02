@@ -6,19 +6,20 @@ from pages.user.auction_page import AuctionPage
 from locators.user.auction_locators import BankAccounts
 
 @pytest.mark.parametrize('login', ['t1'], indirect=True)
-def test_bank_accounts(navigate_to_my_auctions, allure_step, login):
-    page = navigate_to_my_auctions
+def test_bank_accounts(created_auction, allure_step, login):
+    page = login
 
     my_auctions_page = MyAuctionsPage(page)
     auction_page = AuctionPage(page)
     navigation_page = NavigationPage(page)
+
+    allure_step("Navigate to my auctions", lambda: navigation_page.navigate_to_my_auctions(), take_screenshot=False)
 
     allure_step("Navigate to 'New Auction' page", lambda: my_auctions_page.navigate_to_new_auction())
 
     allure_step("Fill in all required fields", lambda: (
         auction_page.select_organiser(),
         auction_page.select_procedure(),
-        navigation_page.close_telegram_popup(),
         auction_page.fill_basic_info_block(),
         auction_page.fill_detail_lot_description_block(),
         auction_page.select_classifier(),
