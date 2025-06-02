@@ -53,6 +53,7 @@ class MyAuctionsPage:
         self.page.locator(MyAuctionsLocators.MORE_OPTIONS).first.click()
         self.page.get_by_role("button", name=MyAuctionsLocators.COPY).nth(0).click()
         self.page.get_by_placeholder(MyAuctionsLocators.ORDER_NUMBER_FIELD).fill("1")
+        self.page.locator(MyAuctionsLocators.TIME_FIELD).fill("2359")
 
     def copy_based_option(self):
         self.page.locator(MyAuctionsLocators.MORE_OPTIONS).first.click()

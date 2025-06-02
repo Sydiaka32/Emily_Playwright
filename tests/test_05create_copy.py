@@ -2,17 +2,20 @@ import pytest
 
 from pages.user.auction_page import AuctionPage
 from pages.user.my_auctions_page import MyAuctionsPage
+from pages.user.navigation_page import NavigationPage
+
 
 @pytest.mark.parametrize('login', ['t1'], indirect=True)
-def test_create_copy(navigate_to_my_auctions, get_auction_id, allure_step, login):
-    page = navigate_to_my_auctions  # The browser object passed by the fixture
+def test_create_copy(created_auction, get_auction_id, allure_step, login):
+    page = login
     my_auctions_page = MyAuctionsPage(page)
     auction_page = AuctionPage(page)
+    navigation_page = NavigationPage(page)
+    original_auction_id = created_auction
 
+    # Step 1: Navigate to my auctions
+    allure_step("Navigate to my auctions", lambda: navigation_page.navigate_to_my_auctions(), take_screenshot=False)
     allure_step("Switch to published tab", lambda: my_auctions_page.switch_to_published(), take_screenshot=True)
-
-    # Step 1: Retrieve the original auction ID using the fixture
-    original_auction_id = allure_step("Retrieve the original auction id", lambda: get_auction_id(), take_screenshot=False)
 
     # Step 2: Click the copy option to create a new auction
     allure_step("Copy option", lambda: my_auctions_page.copy_option(), take_screenshot=True)

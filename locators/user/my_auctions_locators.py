@@ -20,6 +20,7 @@ class MyAuctionsLocators:
     PUBLISH_COPY_BASED = "Створити копію процедури на основі існуючої"
     ORDER_NUMBER_FIELD = "Черговість лоту"
     SUBMIT_POPUP = "ТАК"
+    TIME_FIELD = 'input[type="text"][value^="09:"][inputmode="numeric"]'
 
     DRAFTS_TAB = "a[role='tab'][href='/my-auctions/drafts']"
     SEARCH_FIELD = "input[name='keyword']"

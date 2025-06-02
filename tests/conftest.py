@@ -66,13 +66,13 @@ def navigate_to_my_auctions(sync_page):
 
 
 @pytest.fixture
-def get_auction_id(navigate_to_my_auctions):
+def get_auction_id(sync_page):
     """Auction ID retrieval fixture"""
 
     def _get_auction_id():
-        my_auctions_page = MyAuctionsPage(navigate_to_my_auctions)
+        my_auctions_page = MyAuctionsPage(sync_page)
 
-        with navigate_to_my_auctions.expect_popup() as new_tab:
+        with sync_page.expect_popup() as new_tab:
             my_auctions_page.retrieve_auction_id()
 
         auction_details_page = new_tab.value

@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Updated test 4 with pre-condition + removed extra notification closing">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Updated fixture for creating auction via ui">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locators/user/my_auctions_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/user/my_auctions_locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/user/my_auctions_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/my_auctions_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_05create_copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_05create_copy.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737815185447</updated>
-    </task>
-    <task id="LOCAL-00018" summary="trying allure reporting">
-      <option name="closed" value="true" />
-      <created>1741029208161</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1741029208161</updated>
     </task>
     <task id="LOCAL-00019" summary="implemented working allure-reporting for the first case">
       <option name="closed" value="true" />
@@ -468,7 +464,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747681190399</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Updated fixture for creating auction via ui">
+      <option name="closed" value="true" />
+      <created>1747681504140</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1747681504140</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,7 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added login fixture to each test" />
     <MESSAGE value="Implemented api_utils for creating and publishing auction" />
     <MESSAGE value="Implemented and tested fixture for creating auction before tests via api" />
     <MESSAGE value="Created application and all auctions pages and locators" />
@@ -508,6 +511,7 @@
     <MESSAGE value="Updated test 3 with api fixture" />
     <MESSAGE value="Added switch to drafts for more accuracy" />
     <MESSAGE value="Updated test 4 with pre-condition + removed extra notification closing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated test 4 with pre-condition + removed extra notification closing" />
+    <MESSAGE value="Updated fixture for creating auction via ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated fixture for creating auction via ui" />
   </component>
 </project>
