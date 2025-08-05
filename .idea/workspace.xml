@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Updating case 7 with new fixtures">
-      <change beforePath="$PROJECT_DIR$/tests/test_08is_perishable.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_08is_perishable.py" afterDir="false" />
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added skeleton for a test">
+      <change beforePath="$PROJECT_DIR$/.idea/Emily_Plawright.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Emily_Plawright.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/application_details_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/application_details_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/applications_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/applications_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +59,6 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Automation\Emily_Plawright\pages\user" />
-      <recent name="D:\Automation\Emily_Plawright\locators\user" />
       <recent name="D:\Automation\Emily_Plawright" />
     </key>
   </component>
@@ -75,6 +77,110 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737815185447</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Updated test for publication draft">
+      <option name="closed" value="true" />
+      <created>1738874787572</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738874787572</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added test for creating copy of auction">
+      <option name="closed" value="true" />
+      <created>1739219733037</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1739219733037</updated>
+    </task>
+    <task id="LOCAL-00011" summary="renaming test">
+      <option name="closed" value="true" />
+      <created>1739219796653</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739219796653</updated>
+    </task>
+    <task id="LOCAL-00012" summary="retrieving duplicated code into the fixture">
+      <option name="closed" value="true" />
+      <created>1739221607626</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1739221607626</updated>
+    </task>
+    <task id="LOCAL-00013" summary="updated logic for copy creation to prevent fails due to draft auctions">
+      <option name="closed" value="true" />
+      <created>1739474168706</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1739474168706</updated>
+    </task>
+    <task id="LOCAL-00014" summary="trying to implement logic with continuous checking for notifications">
+      <option name="closed" value="true" />
+      <created>1739479997201</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739479997201</updated>
+    </task>
+    <task id="LOCAL-00015" summary="changed comments for steps">
+      <option name="closed" value="true" />
+      <created>1739621680444</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1739621680445</updated>
+    </task>
+    <task id="LOCAL-00016" summary="refactored code with extracting auction id by using added previously fixture">
+      <option name="closed" value="true" />
+      <created>1739621805046</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1739621805046</updated>
+    </task>
+    <task id="LOCAL-00017" summary="created copy creation based on existing auction">
+      <option name="closed" value="true" />
+      <created>1739626847510</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1739626847510</updated>
+    </task>
+    <task id="LOCAL-00018" summary="trying allure reporting">
+      <option name="closed" value="true" />
+      <created>1741029208161</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1741029208161</updated>
+    </task>
+    <task id="LOCAL-00019" summary="implemented working allure-reporting for the first case">
+      <option name="closed" value="true" />
+      <created>1741034186199</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1741034186199</updated>
+    </task>
+    <task id="LOCAL-00020" summary="extracted allure reporting to fixtures">
+      <option name="closed" value="true" />
+      <created>1741120202033</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1741120202033</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refactored the first test with fixtures">
+      <option name="closed" value="true" />
+      <created>1741121086324</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1741121086324</updated>
     </task>
     <task id="LOCAL-00022" summary="removed unnecessary fixture for taking step with screenshot">
       <option name="closed" value="true" />
@@ -364,111 +470,7 @@
       <option name="project" value="LOCAL" />
       <updated>1745520903509</updated>
     </task>
-    <task id="LOCAL-00058" summary="Implemented approving of a bid by admin">
-      <option name="closed" value="true" />
-      <created>1745866042706</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1745866042706</updated>
-    </task>
-    <task id="LOCAL-00059" summary="moving locator files to user folder">
-      <option name="closed" value="true" />
-      <created>1745866177681</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1745866177681</updated>
-    </task>
-    <task id="LOCAL-00060" summary="moving page files to user folder">
-      <option name="closed" value="true" />
-      <created>1745866237992</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1745866237992</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Added pre-condtion for test 2">
-      <option name="closed" value="true" />
-      <created>1747679811984</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1747679811984</updated>
-    </task>
-    <task id="LOCAL-00062" summary="spaces">
-      <option name="closed" value="true" />
-      <created>1747679888398</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1747679888398</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Added known improvements">
-      <option name="closed" value="true" />
-      <created>1747679975875</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1747679975876</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Updated test 3 with api fixture">
-      <option name="closed" value="true" />
-      <created>1747680379758</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1747680379758</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Added switch to drafts for more accuracy">
-      <option name="closed" value="true" />
-      <created>1747680636772</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1747680636772</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Updated test 4 with pre-condition + removed extra notification closing">
-      <option name="closed" value="true" />
-      <created>1747681190399</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1747681190399</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Updated fixture for creating auction via ui">
-      <option name="closed" value="true" />
-      <created>1747681504140</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1747681504140</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Updating case 5 with new fixtures">
-      <option name="closed" value="true" />
-      <created>1748887912228</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1748887912228</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Updating case 6 with new fixtures">
-      <option name="closed" value="true" />
-      <created>1748888791379</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1748888791379</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Updating case 7 with new fixtures">
-      <option name="closed" value="true" />
-      <created>1748889067858</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1748889067858</updated>
-    </task>
-    <option name="localTasksCounter" value="71" />
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,6 +485,19 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactored bank accounts test to prevent a lot of duplicated code" />
+    <MESSAGE value="Added requirements.txt file" />
+    <MESSAGE value="Removed creation draft into fixture" />
+    <MESSAGE value="Added methods for custom waitings" />
+    <MESSAGE value="Refactored test creation draft with fixture" />
+    <MESSAGE value="Tried to refactor test using fixture" />
+    <MESSAGE value="Implemented is perishable test" />
+    <MESSAGE value="Tried to figure out why its works this way but not immediately after publish" />
+    <MESSAGE value="Refactorred login fixture for more flexible usage. Parametrized tests" />
+    <MESSAGE value="Added login fixture to each test" />
+    <MESSAGE value="Implemented api_utils for creating and publishing auction" />
+    <MESSAGE value="Implemented and tested fixture for creating auction before tests via api" />
+    <MESSAGE value="Created application and all auctions pages and locators" />
     <MESSAGE value="Implemented navigation to auction details" />
     <MESSAGE value="Added locators for elements in application page" />
     <MESSAGE value="Updated test and locators to xpaths" />
@@ -495,19 +510,6 @@
     <MESSAGE value="Adding condition for expect element after login for admin" />
     <MESSAGE value="Added fixture for publishing application" />
     <MESSAGE value="Added skeleton for a test" />
-    <MESSAGE value="Implemented approving of a bid by admin" />
-    <MESSAGE value="moving locator files to user folder" />
-    <MESSAGE value="moving page files to user folder" />
-    <MESSAGE value="Added pre-condtion for test 2" />
-    <MESSAGE value="spaces" />
-    <MESSAGE value="Added known improvements" />
-    <MESSAGE value="Updated test 3 with api fixture" />
-    <MESSAGE value="Added switch to drafts for more accuracy" />
-    <MESSAGE value="Updated test 4 with pre-condition + removed extra notification closing" />
-    <MESSAGE value="Updated fixture for creating auction via ui" />
-    <MESSAGE value="Updating case 5 with new fixtures" />
-    <MESSAGE value="Updating case 6 with new fixtures" />
-    <MESSAGE value="Updating case 7 with new fixtures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating case 7 with new fixtures" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added skeleton for a test" />
   </component>
 </project>

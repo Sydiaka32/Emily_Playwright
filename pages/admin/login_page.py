@@ -14,10 +14,14 @@ class LoginPageAdmin:
 
 
     def login_ad(self):
-        # Use the username, password, and URL from the config file
+        """Performs login action on the admin login page"""
+
+        # Navigate to the admin login page
         self.page.goto(self.admin_url)
 
-        # Use the locators from the LoginLocators class
+        # Fill in the email and password fields using locators and credentials
         self.page.locator(LoginLocatorsAdmin.EMAIL_INPUT).fill(self.username_ad)
         self.page.locator(LoginLocatorsAdmin.PASSWORD_INPUT).fill(self.password)
+
+        # Click the login/submit button
         self.page.locator(LoginLocatorsAdmin.SUBMIT_BUTTON).click()
