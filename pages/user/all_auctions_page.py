@@ -9,10 +9,16 @@ class AllAuctionsPage:
         self.page = page
 
     def navigate_to_new_auction(self):
+        """Clicks the 'New Auction' button to navigate to the auction creation page."""
         self.page.locator(AccountLocators.NEW_AUCTION).click()
 
     def search_auction(self, prozorro_id: str):
-        # self.page.locator(AllAuctionsLocators.SEARCH_FIELD).fill(prozorro_id)
+        """
+        Searches for an auction by entering the given Prozorro ID in the search field
+        and clicking the search button.
+
+        Args: prozorro_id (str): The unique Prozorro ID of the auction to search for.
+        """
         self.page.get_by_role("textbox", name=AllAuctionsLocators.SEARCH_FIELD).fill(prozorro_id)
         self.page.get_by_role("button", name=AllAuctionsLocators.SEARCH_BUTTON).first.click()
 

@@ -7,6 +7,7 @@ class ApplicationPage:
         self.page = page
 
     def select_profile(self):
+        """Select the profile option from the profile dropdown."""
         combobox = self.page.locator(ApplicationLocators.PROFILE_SELECT)
         combobox.wait_for()
         combobox.scroll_into_view_if_needed()
@@ -14,17 +15,18 @@ class ApplicationPage:
         self.page.locator(ApplicationLocators.APHRODITE_OPTION).click()
 
     def fill_price(self):
+        """Fill the price field with a hardcoded value of 1500."""
         self.page.locator(ApplicationLocators.PRICE_FIELD).fill("1500")
 
     def continue_option(self):
+        """Click the continue button to proceed in the application."""
         self.page.locator(ApplicationLocators.CONTINUE_BUTTON).click()
 
     def confirmation_checks(self):
+        """Click the privacy policy and regulations checkboxes."""
         self.page.locator(ApplicationLocators.PRIVASY_POLISY_CHECK).nth(0).click()
         self.page.locator(ApplicationLocators.REGULATIONS_CHECK).nth(1).click()
 
     def save_draft_application(self):
+        """Click the button to save the current application as a draft."""
         self.page.locator(ApplicationLocators.SAVE_DRAFT_BUTTON).click()
-
-
-

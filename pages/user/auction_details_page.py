@@ -6,8 +6,8 @@ class AuctionDetailsPage:
     def __init__(self, page: Page):
         self.page = page
 
-
     def get_discount_value(self):
+        """Retrieve the discount value percentage from the previous auction displayed on the page."""
         # Locate the discount label to ensure it's loaded
         discount_label = self.page.get_by_text("Розмір знижки від попереднього аукціону, %")
 
@@ -30,14 +30,16 @@ class AuctionDetailsPage:
         return discount_value.text_content().strip()
 
     def expand_details(self):
+        """Click the button to expand additional auction details."""
         self.page.get_by_role('button', name=AuctionDetailsLocators.DETAIL_INFO_ACORDEON).click()
 
     def get_previous_id_value(self):
+        """Get the text of the previous auction ID from the page."""
         previous_id_locator = self.page.locator(AuctionDetailsLocators.PREVIOUS_AUCTION_ID)
         displayed_value = previous_id_locator.inner_text()
         return displayed_value
 
     def apply_for_auction(self):
+        """Click the button to participate in the auction."""
         # Replace with the locator for the procedure field in the card
         self.page.get_by_role("button", name=AuctionDetailsLocators.PARTICIPATE_BUTTON).click()
-
