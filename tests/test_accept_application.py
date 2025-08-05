@@ -42,7 +42,7 @@ def test_accept_application(published_auction, draft_application, published_appl
 
     page.wait_for_timeout(3000)
 
-    # Step 8: Verify status
+    # Step 6: Verify status
     bid_status = applications_page_admin.get_confirmed_status(bid_id)
     verification_status = applications_page_admin.get_activated_status(bid_id)
 

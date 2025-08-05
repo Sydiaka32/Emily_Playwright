@@ -8,14 +8,9 @@ from pages.user.navigation_page import NavigationPage
 @pytest.mark.parametrize('login', ['t3'], indirect=True)
 def test_creation_draft_application(published_auction, draft_application, allure_step, login):
     page = login
-    all_auctions_page = AllAuctionsPage(page)
     my_applications_page = MyApplicationPage(page)
-    application_page = ApplicationPage(page)
     navigation = NavigationPage(page)
 
-    # Now you have:
-    # - published_auction: ID of the published auction
-    # - draft_application: bid created for that published auction
 
     # Step 1: Navigate to my applications
     allure_step("Search auction", lambda: navigation.navigate_to_my_applications(), take_screenshot=True)

@@ -86,6 +86,10 @@ def get_auction_id(sync_page):
 
 @pytest.fixture
 def allure_step(sync_page):
+    """
+    Wrapper fixture for performing steps in tests with Allure reporting.
+    Attaches screenshots automatically unless disabled.
+    """
     def _step(name, action, take_screenshot=True):
         with allure.step(name):
             result = action()
@@ -97,6 +101,10 @@ def allure_step(sync_page):
 
 @pytest.fixture
 def capture_api_values(sync_page, get_auction_id):
+    """
+    Fixture to capture specific API response values during test execution,
+    storing discount, previous auction ID, and perishable flag from auction details API responses.
+    """
     captured_values = {}
 
     # Capture API responses only for the right endpoint
@@ -137,7 +145,7 @@ def create_draft_auction(login, allure_step):
     allure_step("Navigate to 'New Auction' page", my_auctions_page.navigate_to_new_auction, take_screenshot=False)
     allure_step("Select organiser", auction_page.select_organiser, take_screenshot=False)
     allure_step("Select procedure", auction_page.select_procedure, take_screenshot=False)
-    #allure_step("Close Telegram popup", navigation_page.close_telegram_popup, take_screenshot=False)
+
     allure_step("Fill in Basic info block", auction_page.fill_basic_info_block, take_screenshot=True)
     allure_step("Fill in Details block", auction_page.fill_detail_lot_description_block, take_screenshot=True)
     allure_step("Select classifier", auction_page.select_classifier, take_screenshot=True)

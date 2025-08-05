@@ -1,5 +1,4 @@
 import pytest
-
 from pages.user.auction_page import AuctionPage
 from pages.user.my_auctions_page import MyAuctionsPage
 from pages.user.navigation_page import NavigationPage
