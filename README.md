@@ -1,3 +1,13 @@
+# 🎯 Emily Playwright UI Testing Framework
+
+This project is a robust **UI test automation framework** built with [**Playwright**](https://playwright.dev/python/), [**Pytest**](https://docs.pytest.org/), and enhanced with [**Allure**](https://docs.qameta.io/allure/) for detailed test reporting. It is designed to test end-to-end user flows in web applications across Chromium, Firefox, and WebKit browsers.
+
+The framework supports:
+- Cross-browser automation
+- Test tagging and filtering
+- Readable reporting via Allure
+- Parametrization and modular page object pattern
+
 # 🛠 Tech Stack
 
 | Tool                    | Description |
@@ -6,7 +16,6 @@
 | `playwright`           | Python library to automate Chromium, WebKit, and Firefox through a single API. |
 | `pytest`              | Popular testing framework for Python |
 | `pytest-playwright`   | Pytest plugin for Playwright integration for browser automation testing |
-| `pytest-split`       | Pytest plugin that splits the test suite into equally sized sub-suites based on test execution time. |
 | `requests`           | Versatile library for making HTTP requests in Python |
 
 # ⚙️ Setup Instructions
