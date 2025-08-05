@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added missing docstrings to functions in admin pages">
+    <list default="true" id="c8b6d527-abda-4a28-951e-242c256feb25" name="Changes" comment="Added missing docstrings to functions in user pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/all_auctions_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/all_auctions_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/application_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/application_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/auction_details_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/auction_details_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/auction_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/auction_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/bank_accounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/bank_accounts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/login_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/my_applications_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/my_applications_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_01creation_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_creation_draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_02edit_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_edit_draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_03delete_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_delete_draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_04publish_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_publish_draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_05create_copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_create_copy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_06create_copy_based.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_create_copy_based.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_07bank_aacounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_bank_accounts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_08is_perishable.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_is_perishable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_09creation_draft_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_creation_draft_application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_10publish_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_publish_application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_11accept_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_accept_application.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,14 +84,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737815185447</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Added test for creating copy of auction">
-      <option name="closed" value="true" />
-      <created>1739219733037</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1739219733037</updated>
     </task>
     <task id="LOCAL-00011" summary="renaming test">
       <option name="closed" value="true" />
@@ -473,7 +469,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754379224221</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Added missing docstrings to functions in user pages">
+      <option name="closed" value="true" />
+      <created>1754381370178</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1754381370178</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -488,7 +492,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added requirements.txt file" />
     <MESSAGE value="Removed creation draft into fixture" />
     <MESSAGE value="Added methods for custom waitings" />
     <MESSAGE value="Refactored test creation draft with fixture" />
@@ -513,6 +516,7 @@
     <MESSAGE value="Added fixture for publishing application" />
     <MESSAGE value="Added skeleton for a test" />
     <MESSAGE value="Added missing docstrings to functions in admin pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added missing docstrings to functions in admin pages" />
+    <MESSAGE value="Added missing docstrings to functions in user pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added missing docstrings to functions in user pages" />
   </component>
 </project>
