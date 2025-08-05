@@ -43,8 +43,6 @@ def upload_document():
     token = api_login_organiser()  # Obtain the token by logging in
 
     # Calculate the repository root directory.
-    # Here we assume this file is located in something like <repo_root>/some_folder/this_file.py,
-    # so we use .parent.parent or adjust it as needed.
     repo_root = Path(__file__).resolve().parent.parent  # Adjust based on your structure
 
     # Build the path to the document which should always be in 'utils/attachments/Test_PDF.pdf'
